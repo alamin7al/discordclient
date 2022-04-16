@@ -1,0 +1,37 @@
+.downloadbackground {
+    background-color: #23272A;
+}
+
+.downloadtext {
+    font-size: 56px;
+
+    font-weight: 800;
+    font-size: 44px;
+    font-size: clamp(24px, 5vw, 44px);
+    line-height: 95%;
+    text-transform: uppercase;
+    text-rendering: geometricPrecision;
+}
+
+
+.commonnbtn {
+    border-radius: 28px;
+    font-size: 20px;
+    padding: 16px 32px;
+    line-height: 24px;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: #23272A;
+    border: 0;
+    outline: 0;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.commonnbtn:hover {
+    background-color: #36393F;
+}
+
+.textstyle h3{
+   margin:20px;
+}

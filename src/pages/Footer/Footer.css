@@ -1,0 +1,38 @@
+.icon-style a {
+    margin: 0px 17px;
+    color: #fff;
+}
+
+.imagine {
+  font-size: 50px;
+    color: #5865f2;
+    font-weight: 800;
+    line-height: 95%;
+    text-transform: uppercase;
+    text-rendering: geometricPrecision;
+}
+
+.product h4 {
+    color: #5865f2;
+}
+
+
+
+
+
+.footerbtn {
+    border-radius: 40px;
+    font-size: 14px;
+    padding: 7px 16px;
+    color: #fff;
+
+    border: none;
+    transition: all 0.5s ease;
+    background-color: #5865f2;
+}
+
+.footerbtn:hover {
+    box-shadow: rgba(13, 10, 20, 0.584) 0 8px 15px;
+    transform: translateY(-2px);
+    color: #fff;
+}

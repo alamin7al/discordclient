@@ -1,0 +1,148 @@
+.titletext {
+    display: block;
+    overflow: visible;
+    margin-top: 10px;
+    margin-left: 0px;
+    font-family: 'Ginto Nord', sans-serif;
+    color: #23272a;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.btnheder {
+    border-radius: 40px;
+    font-size: 14px;
+    padding: 7px 16px;
+    border: none;
+    transition: all 0.5s ease;
+
+}
+
+.btnheder:hover {
+    box-shadow: rgba(13, 10, 20, 0.584) 0 8px 15px;
+    transform: translateY(-2px);
+    color: #3F4EEF;
+}
+
+.navbarstyle {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+.navbarstyle:hover {
+    /* margin-bottom: 3px; */
+    border-bottom: 1px solid #fff;
+    color: white;
+}
+
+.titletext:hover {
+    color: #5865F2;
+}
+
+
+.blogtext {
+    display: block;
+    overflow: visible;
+    margin-top: 10px;
+    font-family: 'Ginto Normal', sans-serif;
+    font-size: 24px;
+    line-height: 125%;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.blogtile {
+    display: block;
+    font-family: 'Ginto Nord', sans-serif;
+    color: #5865f2;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.blogtile:hover {
+    color: #5865F2;
+}
+
+.blogtext:hover {
+    color: #5865F2;
+}
+
+.blogimage {
+    border-radius: 13px;
+}
+
+.featureh {
+    overflow: visible;
+    color: #5865f2;
+    font-size: 40px;
+    line-height: 100%;
+    font-weight: 900;
+    text-transform: uppercase;
+
+}
+
+.featuretext {
+    margin-top: 10px;
+    font-family: 'Whitney Medium', sans-serif;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+
+.blogbtn {
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 16px 32px;
+    border-radius: 28px;
+    background-color: #5865f2;
+    transition: opacity 200ms ease;
+    font-family: 'Ginto Nord', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    letter-spacing: 1px;
+    transition: 0.2s ease;
+}
+.ftitle{
+    display: block;
+    overflow: visible;
+    align-self: baseline;
+    font-family: 'Ginto Normal', sans-serif;
+    font-size: 20px;
+    line-height: 125%;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ftitle:hover{
+    color: #3E4EFD;
+}
+
+.blogbtn:hover {
+    background-color: #3E4EFD;
+}
+
+@media(max-width:768px) {
+    .titletext {
+
+        font-size: 18px;
+        line-height: 48px;
+        font-weight: 900;
+
+    }
+}
