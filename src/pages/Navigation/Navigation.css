@@ -26,6 +26,7 @@
 .navbarstyle:hover {
     /* margin-bottom: 3px; */
     border-bottom: 1px solid #fff;
+
     color: white;
 }
 
@@ -183,13 +184,13 @@
         font-weight: 800;
         line-height: 95%;
         text-transform: uppercase;
-        text-rendering: geometricPrecision; 
+        text-rendering: geometricPrecision;
     }
 }
 
 
 @media only screen and (max-width: 500px) {
-  
+
     .footer-div {
         margin-top: 150px;
     }
@@ -302,8 +303,8 @@ p {
 }
 
 @media screen and (min-width: 800px) {
-   
-    
+
+
     h1 {
         font-size: 1rem;
     }
@@ -358,4 +359,57 @@ p {
     background-color: #36393F;
 
 
+}
+
+.dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    min-width: 120px;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 0.25rem;
+}
+
+.profileedit {
+    font-size: 16px
+}
+
+.logoutbtn {
+    text-align: center;
+    padding: 7px 12px;
+    outline: none;
+    border: none;
+    color: #404EED;
+    background-color: #fff;
+
+}
+
+.logoutbtn:hover {
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+
+}
+
+
+.loginbtn {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    padding: 8px 29px;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease-in;
+}
+
+.loginbtn:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
