@@ -10,28 +10,18 @@ import { FaUserEdit } from 'react-icons/fa';
 export default function ProfileDeshbord() {
     const [nav, setNav] = useState('about')
     return (
-        <div className='my-5 profilehed' style={{ height: '100%', width: '100%' }}>
+        <div className=' profilehed ' style={{ height: '100%', width: '100%', background: '#404EED' }}>
             <div className="container " style={{ height: '100%' }}>
                 <div className="" style={{ height: '100%' }}>
                     <div className="row gx-5 gy-5">
-                        <div className="col-lg-3 col-md-3 deshbord">
+                        <div className="col-lg-3 col-md-3  my-5">
+                            <div className="deshbordbtn  text-start my-5">
+                                <button onClick={() => setNav("about")} className='aboutbtn fw-lighter text-uppercase text-start"'><BsFillPersonFill className='fs-2' /> About </button>
 
-                            <div className="deshbordbtn">
-                                <div  className="">
-                                 
-
-                                    <button onClick={() => setNav("about")} className='aboutbtn'>   <BsFillPersonFill className='fs-1 me-2'></BsFillPersonFill> About</button>
-                                </div>
-                                <div className="">
-                                   
-                               
-                                    <button onClick={() => setNav("Edit")} className='editbtn my-4'>  <FaUserEdit style={{color:'#404EED'}} className='fs-1 me-2'></FaUserEdit> Edit Profile </button>
-
-                                </div>
-
+                                <button onClick={() => setNav("Edit")} className='editbtn my-4 fw-lighter text-uppercase text-start"'><FaUserEdit className='fs-2' /> Edit Profile </button>
                             </div>
                         </div>
-                        <div className="col-lg-9 col-md-9 deshbord">
+                        <div className="col-lg-9 col-md-9 deshbord my-5 ">
                             {
                                 nav === "about" && <About />
                             }
@@ -40,10 +30,6 @@ export default function ProfileDeshbord() {
                             }
                         </div>
                     </div>
-
-
-
-
                 </div>
             </div>
 

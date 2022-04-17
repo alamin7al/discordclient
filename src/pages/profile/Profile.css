@@ -1,14 +1,18 @@
 .editbtn {
-    padding: 10px;
     width: 100%;
     outline: none;
     border: none;
-    background-color: #fff;
-    color: black;
+    background-color: transparent;
+    color: #fff;
     transition: all 0.3s ease-in;
-    width: 100%;
     font-size: 17px;
     font-weight: 500;
+    text-align: start;
+    width: 100%;
+}
+
+.icons {
+    background-color: transparent;
 }
 
 .aboutbtn {
@@ -16,22 +20,23 @@
     width: 100%;
     outline: none;
     border: none;
-    background-color: #fff;
-    color: black;
+    background-color: transparent;
+    color: #fff;
     transition: all 0.3s ease-in;
-    width: 100%;
     font-size: 17px;
     font-weight: 500;
+    text-align: start;
+    width: 100%;
 
 }
 
 .editbtn:hover {
-    border-bottom: 2px solid #404EED;
+    border-bottom: 2px solid #fff;
     width: 100%;
 }
 
 .aboutbtn:hover {
-    border-bottom: 2px solid #404EED;
+    border-bottom: 2px solid #fff;
     width: 100%;
 
 }
@@ -39,16 +44,52 @@
 
 .deshbordbtn {
     display: flex;
-    align-items: flex-start;
-    justify-content: start;
     flex-direction: column;
+    justify-content: flex-start;
+    text-align: start;
 }
 
-.deshbord {
-    height: 80vh;
 
+.profilehed {
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 10px 10px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 16px -18px inset;
+}
+
+
+@media(max-width:768px) {}
+
+@media only screen and (max-width: 500px) {}
+
+@media screen and (max-width: 800px) {}
+
+td {
+    font-size: 20px;
+}
+
+.aboutdata {
+    box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
 
 }
-.profilehed{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+.submitbtn {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    padding: 8px 29px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    width: 150px;
+    margin: 20px 0px;
+}
+input{
+    color: #fff;
+}
+.aboutdata h1 {
+    text-align: start;
+    padding: 15px;
+    font-size: 20px;
+    border-bottom: 2px solid #404EED;
+    width: 100%;
 }

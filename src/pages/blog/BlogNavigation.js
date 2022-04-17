@@ -1,21 +1,33 @@
 import React from 'react'
-import { Nav, Navbar } from 'react-bootstrap'
-import { NavLink } from 'react-router-dom'
+import { Image, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import { Link, NavLink } from 'react-router-dom'
 import { SiDiscord } from 'react-icons/si';
 import BlogNavbarBackground from './BlogNavbarBackground';
+import useAuth from '../login/useAuth';
 
 export default function BlogNavigation() {
+    const { user, logOut } = useAuth()
+    console.log(user);
+    const UserMenu = (
+        <Image
+            src={user.photoURL}
+            roundedCircle
+            style={{ height: '40px', width: '40px', }}
+        />
+    )
+  
+
     return (
         <div style={{ background: '#404EED' }}>
-            <Navbar className='text-white mx-3' expand="lg">
+            <Navbar className='text-white container' expand="lg">
 
-            <NavLink className='text-white' to='/home'>
-          <div className="d-flex justify-content-center align-items-center">
-            <SiDiscord style={{ backgroundColor: '', }} className='display-5'></SiDiscord>
-            <h3 className='ms-3 fs-5'>  Discord</h3>
-          </div>
+                <NavLink className='text-white' to='/home'>
+                    <div className="d-flex justify-content-center align-items-center">
+                        <SiDiscord style={{ backgroundColor: '', }} className='display-5'></SiDiscord>
+                        <h3 className='ms-3 fs-5'>  Discord</h3>
+                    </div>
 
-        </NavLink>
+                </NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto text-white">
@@ -31,7 +43,35 @@ export default function BlogNavigation() {
                     <Nav className="me-end">
 
                     </Nav>
-                    <button className='btnheder'>Open Discord</button>
+                    {
+                        user?.email ?
+                            <div>
+                                {
+                                    user?.photoURL ? <NavDropdown className='' id="" title={UserMenu}>
+                                        <NavLink className='w-25 h-25' to='/profile'>
+                                            <div className="profileedit text-center">
+                                                <p className='text-center m-0 logoutbtn'>MY Profile</p>
+                                                <button className='logoutbtn' onClick={logOut}>LogOut</button>
+                                            </div>
+                                        </NavLink>
+                                    </NavDropdown> : <NavDropdown className='text-white' id="" title='logout'>
+                                        <NavLink className='w-25 h-25' to='/profile'>
+                                            <div className="profileedit text-center">
+                                                <p className='text-center m-0 logoutbtn'>MY Profile</p>
+                                                <button className='logoutbtn' onClick={logOut}>LogOut</button>
+                                            </div>
+                                        </NavLink>
+                                    </NavDropdown>
+                                }
+                            </div>
+
+                            : <Link className='text-dark text-decoration-none fs-5 text-dark' to='/login'>
+                                <button className='btnheder'>
+                                    Login
+                                </button>
+                            </Link>
+                    }
+
 
                 </Navbar.Collapse>
 

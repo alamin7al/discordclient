@@ -1,13 +1,24 @@
 import React from 'react'
-import { Nav, Navbar } from 'react-bootstrap'
-import { NavLink } from 'react-router-dom'
+import { Image, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import { Link, NavLink } from 'react-router-dom'
 import { SiDiscord } from 'react-icons/si';
+import useAuth from '../login/useAuth';
 export default function HelpNavbar() {
+  const { user, logOut } = useAuth()
+  const UserMenu = (
+    <Image
+      src={user.photoURL}
+      alt="UserName profile image"
+      roundedCircle
+      style={{ height: '40px', width: '40px', }}
+    />
+  )
+
   return (
     <div className='helpback '>
-      <Navbar className='text-white mx-3' expand="lg">
+      <Navbar className='text-white container' expand="lg">
 
-      <NavLink className='text-white' to='/home'>
+        <NavLink className='text-white' to='/home'>
           <div className="d-flex justify-content-center align-items-center">
             <SiDiscord style={{ backgroundColor: '', }} className='display-5'></SiDiscord>
             <h3 className='ms-3 fs-5'>  Discord</h3>
@@ -29,7 +40,24 @@ export default function HelpNavbar() {
           <Nav className="me-end">
 
           </Nav>
-          <button className='btnheder'>Open Discord</button>
+          {
+            user?.email ?
+              <NavDropdown className='' id="" title={UserMenu}>
+                <NavLink className='w-25 h-25' to='/profile'>
+                  <div className="profileedit text-center">
+                    <p className='text-center m-0 logoutbtn'>MY Profile</p>
+                    <button className='logoutbtn' onClick={logOut}>LogOut</button>
+                  </div>
+                </NavLink>
+              </NavDropdown>
+
+              : <Link className='text-dark text-decoration-none fs-5 text-dark' to='/login'>
+                <button className='btnheder'>
+                  Login
+                </button>
+              </Link>
+          }
+
 
         </Navbar.Collapse>
 

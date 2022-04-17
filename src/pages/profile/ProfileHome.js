@@ -1,16 +1,14 @@
 import React from 'react'
-import Footer from '../Footer/Footer'
 import Navigation from '../Navigation/Navigation'
 import ProfileDeshbord from './ProfileDeshbord'
 import UserProfile from './UserProfile'
 
 export default function ProfileHome() {
   return (
-    <div>
+    <div style={{background:'#5865F2'}} className=''>
       <Navigation />
       <UserProfile />
       <ProfileDeshbord />
-      <Footer />
     </div>
   )
 }

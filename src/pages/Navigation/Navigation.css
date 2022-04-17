@@ -235,9 +235,6 @@
         font-size: 16px;
     }
 
-    h1 {
-        font-size: 20px;
-    }
 
     .discord-headline {
         font-weight: 700;
@@ -305,9 +302,7 @@ p {
 @media screen and (min-width: 800px) {
 
 
-    h1 {
-        font-size: 1rem;
-    }
+
 
     h2 {
         font-size: 2.5rem;
@@ -409,6 +404,7 @@ p {
     width: 100%;
     transition: all 0.2s ease-in;
 }
+
 
 .loginbtn:hover {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;

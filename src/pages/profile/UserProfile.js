@@ -5,7 +5,7 @@ export default function UserProfile() {
   const { user } = useAuth()
   console.log(user);
   return (
-    <div style={{ height: '300px', width: '100%', background: '#404EED' }}>
+    <div className='' style={{ height: '300px', width: '100%', background: '#404EED' }}>
       <div className="d-flex justify-content-start align-items-center h-100 container">
         <div className="">
           <div className='d-flex justify-content-evenly align-items-center'>
