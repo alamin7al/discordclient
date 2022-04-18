@@ -16,6 +16,7 @@ import AuthProvider from './pages/login/AuthProvider';
 import Register from './pages/login/Register';
 
 import ProfileHome from './pages/profile/ProfileHome';
+import EditProfile from './pages/profile/EditProfile';
 // const Navigation = lazy(() => import('./pages/Navigation/Navigation')) ;
 
 const Home = lazy(() => import('./pages/Home/Home'));
@@ -38,6 +39,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/profile" element={<ProfileHome />} />
+              <Route path="edit/:editid" element={<EditProfile />} />
               <Route path="/" element={<Home />} />
 
             </Routes>

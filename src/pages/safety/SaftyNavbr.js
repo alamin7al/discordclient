@@ -11,7 +11,7 @@ export default function SaftyNavbr() {
   const UserMenu = (
     <Image
       src={user.photoURL}
-      alt="UserName profile image"
+      
       roundedCircle
       style={{ height: '40px', width: '40px', }}
     />
@@ -45,22 +45,34 @@ export default function SaftyNavbr() {
 
                     </Nav>
                     {
-            user?.email ?
-              <NavDropdown className='' id="" title={UserMenu}>
-                <NavLink className='w-25 h-25' to='/profile'>
-                  <div className="profileedit text-center">
-                    <p className='text-center m-0 logoutbtn'>MY Profile</p>
-                    <button className='logoutbtn' onClick={logOut}>LogOut</button>
-                  </div>
-                </NavLink>
-              </NavDropdown>
+                        user?.email ?
+                            <div>
+                                {
+                                    user?.photoURL ? <NavDropdown className='' id="" title={UserMenu}>
+                                        <NavLink className='w-25 h-25' to='/profile'>
+                                            <div className="profileedit text-center">
+                                                <p className='text-center m-0 logoutbtn'>MY Profile</p>
+                                                <button className='logoutbtn' onClick={logOut}>LogOut</button>
+                                            </div>
+                                        </NavLink>
+                                    </NavDropdown> : <NavDropdown className='text-white' id="" title='logout'>
+                                        <NavLink className='w-25 h-25' to='/profile'>
+                                            <div className="profileedit text-center">
+                                                <p className='text-center m-0 logoutbtn'>MY Profile</p>
+                                                <button className='logoutbtn' onClick={logOut}>LogOut</button>
+                                            </div>
+                                        </NavLink>
+                                    </NavDropdown>
+                                }
+                            </div>
 
-              : <Link className='text-dark text-decoration-none fs-5 text-dark' to='/login'>
-                <button className='btnheder'>
-                  Login
-                </button>
-              </Link>
-          }
+                            : <Link className='text-dark text-decoration-none fs-5 text-dark' to='/login'>
+                                <button className='btnheder'>
+                                    Login
+                                </button>
+                            </Link>
+                    }
+
 
 
                 </Navbar.Collapse>

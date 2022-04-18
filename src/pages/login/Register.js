@@ -1,5 +1,7 @@
 import React from 'react';
-
+import qr from '../img/qr.png'
+import loginimg from '../img/login.webp'
+import '../Footer/Footer.css'
 import { useState, } from 'react';
 import {
     BrowserRouter as Router,
@@ -21,7 +23,7 @@ const Register = () => {
     const [loginDate, setLoginData] = useState({})
     const location = useLocation()
     let navigate = useNavigate()
- 
+
     const handleOnBlur = e => {
         const field = e.target.name
         const value = e.target.value
@@ -42,22 +44,31 @@ const Register = () => {
     const handleGoogleLogin = () => {
         googleLogin(location, navigate)
     }
+    const myStyle = {
+        background: `url(${loginimg})`,
+        height: '100%',
+        width: '100%',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        opacity:'0.9'
+
+    };
 
 
     return (
-        <div className="">
-            <div className='  registerDesign d-flex justify-content-center align-items-center '>
+        <div style={myStyle} className="p-5">
+            <div className=''>
+                <div className="container ">
+                    <Card className='p-0'>
+                        <div style={{ marginTop: '' }} className="row">
+                            <div className="col-lg-6 col-md-6 col-sm-12 my-5 text-white fw-lighter ">
+                                <h3 className='loginhedeing'>Welcome Back</h3>
+                                <p className='logintexts'>We are Excited to see you again</p>
 
-                <div className=' fs-5'>
+                                <form
+                                    className='container'
 
-                    <div className='row '>
-                        <div className=' w-100 mx-auto '>
-                            <Card
-
-
-                                style={{ width: '30rem' }} className=' p-3 '>
-                                <h2>Register</h2>
-                                {!loading && <form onSubmit={handleOnSubmit}>
+                                    onSubmit={handleOnSubmit}>
 
                                     <div className="mb-1 text-start">
 
@@ -107,65 +118,50 @@ const Register = () => {
                                             onBlur={handleOnBlur}
                                             id="exampleInputPassword1" />
                                     </div>
-                                    <div className="text-start mt-1">
+                                    <div className="text-start mt-3">
                                         <button
 
-                                            className='btn btn-outline-dark btn-lg mt-1'
+                                            className='submitbtn'
                                             type='submit'
                                         >
 
 
                                             Login</button>
                                     </div>
-                                    <NavLink
-                                        style={{ textDecoration: 'none' }}
 
-                                        to='/login'><p
 
-                                            className='text-dark '
-                                        >Already Register? Please Login</p>
-                                    </NavLink>
+                                </form>
 
-                                </form>}
 
-                                <div>
-                                    <button
-                                        className='btn btn-outline-dark mt-3'
-                                        onClick={handleGoogleLogin}
-                                    >Google SignIn</button>
+                            </div>
+                            <div className="col-lg-6 col-md-6 col-sm-12  imgmargin ">
+                                <div className=''>
+                                    <img src={qr} className='img-fluid' alt="" />
                                 </div>
+                            </div>
+                        </div>
+                        <div style={{ marginTop: '-90px' }} className="text-center">
+                            <NavLink
+                                style={{ textDecoration: 'none' }}
+                                to='/login'><p className='fw-light  askbtn'
+                                >Already Register! Please Login</p>
+                            </NavLink>
 
-
-                                {loading && <div>
-                                    <div class="spinner-grow text-dark" role="status">
-                                        <span class="visually-hidden">Loading...</span>
-                                    </div><div class="spinner-grow text-dark" role="status">
-                                        <span class="visually-hidden">Loading...</span>
-                                    </div>
-                                </div>}
-                                {user?.email &&
-                                    <div class="alert alert-primary" role="alert">
-                                        User Created SuccessFulyy
-                                    </div>
-                                }
-                                {error &&
-                                    <div class="alert alert-warning" role="alert">
-                                        {error}
-                                    </div>
-                                }
-
-
-
-
-                            </Card>
-
+                            <button
+                                className='submitbtn'
+                                onClick={handleGoogleLogin}
+                            >
+                                Google sign in </button>
                         </div>
 
-                    </div>
+
+                    </Card>
+
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
 export default Register;
+

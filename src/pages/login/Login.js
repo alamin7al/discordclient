@@ -1,9 +1,4 @@
 
-
-// import logins from '../../img/preview.jpg';
-
-// import './Login.css'
-
 import { useState } from 'react';
 import {
     BrowserRouter as Router,
@@ -15,9 +10,9 @@ import {
 } from "react-router-dom";
 import { Card } from 'react-bootstrap';
 import useAuth from './useAuth';
-// import { ExitToApp, GolfCourseTwoTone, NearMe } from '@material-ui/icons';
-
-
+import loginimg from '../img/login.webp'
+import qr from '../img/qr.png'
+import '../Footer/Footer.css'
 const Login = () => {
     const { loginInUser, loading, error, user, googleLogin } = useAuth()
 
@@ -47,100 +42,100 @@ const Login = () => {
 
 
 
+    const myStyle = {
+        background: `url(${loginimg})`,
+        height: '100%',
+        width: '100%',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        opacity:'0.9'
+
+    };
+
+
+
+
     return (
-        <div className="">
-            <div  className='
-        loginDesign d-flex justify-content-center align-items-center
-        ba fs-5 '>
+        <div style={myStyle} className="p-5">
+            <div className=''>
+                <div className="container ">
+                    <Card className='p-0'>
+                        <div style={{ marginTop: '' }} className="row">
+                            <div className="col-lg-6 col-md-6 col-sm-12 my-5 text-white fw-lighter ">
+                                <h3 className='loginhedeing'>Welcome Back</h3>
+                                <p className='logintexts'>We are Excited to see you again</p>
+                                <form
+                                    className='container'
+                                    onSubmit={handleOnSubmit}>
+                                    <div className="mb-3 text-start text-white fw-bolder lead">
+                                        <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                        <input
+                                            name='email'
+                                            type="email" className="form-control" id="exampleInputEmail1"
+                                            onChange={handleOnChange}
+                                            placeholder='Type Your Email'
+                                            aria-describedby="emailHelp" />
+                                    </div>
+                                    <div className="mb-3 text-start text-white fw-bolder lead">
+                                        <label for="exampleInputPassword1" className="form-label">Password</label>
+                                        <input
+                                            name='password'
+                                            placeholder='Type Your Password'
+                                            type="password" className="form-control"
+                                            onChange={handleOnChange}
+                                            id="exampleInputPassword1" />
+                                    </div>
+                                    <div className="text-start text-white fw-bolder lead mt-1">
+                                        <button
+                                            className='submitbtn'
+                                            type='submit'
+                                        >
+                                            Login</button>
+                                    </div>
 
-                <Card style={{ width: '30rem' }} className=' p-3 '>
-                    <div
-
-                        className='w-50 mx-auto my-5'>
-                        <h2>Login</h2>
-
-                        <form
-
-
-                            onSubmit={handleOnSubmit}>
-                            <div className="mb-3 text-start">
-
-
-                                <label for="exampleInputEmail1" className="form-label">Email address</label>
-                                <input
-                                    name='email'
-                                    type="email" className="form-control" id="exampleInputEmail1"
-                                    onChange={handleOnChange}
-                                    placeholder='Type Your Email'
-                                    aria-describedby="emailHelp" />
+                                    {loading && <div>
+                                        <div class="spinner-grow text-dark" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div><div class="spinner-grow text-dark" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                    </div>}
+                                    {user?.email &&
+                                        <div class="alert alert-success" role="alert">
+                                            User Created SuccessFulyy
+                                        </div>
+                                    }
+                                    {error &&
+                                        <div class="alert alert-warning" role="alert">
+                                            {error}
+                                        </div>
+                                    }
+                                </form>
                             </div>
-                            <div className="mb-3 text-start">
-
-
-                                <label for="exampleInputPassword1" className="form-label">Password</label>
-
-                                <input
-                                    name='password'
-                                    placeholder='Type Your Password'
-
-                                    type="password" className="form-control"
-                                    onChange={handleOnChange}
-                                    id="exampleInputPassword1" />
+                            <div className="col-lg-6 col-md-6 col-sm-12   my-5">
+                                <div className='my-5'>
+                                    <img src={qr} className='img-fluid' alt="" />
+                                </div>
                             </div>
-                            <div className="text-start mt-1">
-                                <button
-
-                                    className='btn btn-outline-dark btn-lg mt-1'
-                                    type='submit'
-                                >
-
-
-                                    Login</button>
-                            </div>
-
+                        </div>
+                        <div style={{ marginTop: '-30px' }} className="text-center">
                             <NavLink
                                 style={{ textDecoration: 'none' }}
-
-                                to='/register'><p className='text-dark'
-
-
+                                to='/register'><p className=' fw-light  askbtn'
                                 >New User?Please Register</p>
                             </NavLink>
 
-                            {loading && <div>
-                                <div class="spinner-grow text-dark" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div><div class="spinner-grow text-dark" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </div>}
-                            {user?.email &&
-                                <div class="alert alert-success" role="alert">
-                                    User Created SuccessFulyy
-                                </div>
-                            }
-                            {error &&
-                                <div class="alert alert-warning" role="alert">
-                                    {error}
-                                </div>
-                            }
+                            <button
+                                className='submitbtn'
+                                onClick={handleGoogleLogin}
+                            >
+                                Google </button>
+                        </div>
+                    </Card>
 
-                        </form>
-
-                        <button
-
-                            className='btn btn-outline-dark mb-5'
-                            onClick={handleGoogleLogin}
-                        >
-
-                            Google SignIn</button>
-                    </div>
-
-                </Card >
-
-
+                </div>
             </div>
-        </div>
+        </div >
     );
 };
 

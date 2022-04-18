@@ -66,8 +66,8 @@ td {
 }
 
 .aboutdata {
-    box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
-
+    box-shadow: 2px 1px 1px rgba(54, 47, 145, 0.75);
+padding: 10px;
 }
 
 .submitbtn {
@@ -80,16 +80,32 @@ td {
     color: #fff;
     cursor: pointer;
     transition: all 0.2s ease-in;
-    width: 150px;
-    margin: 20px 0px;
+    width: auto;
+    margin-bottom: 20px;
 }
-input{
+
+input {
     color: #fff;
 }
+
 .aboutdata h1 {
     text-align: start;
     padding: 15px;
     font-size: 20px;
-    border-bottom: 2px solid #404EED;
+    border-bottom: 2px solid #bcbdc8;
     width: 100%;
 }
+
+.phtotext {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 100;
+    color: #fff;
+    transition: all 0.6s ease;
+}
+.phtotext:hover{
+    font-size: 30px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+

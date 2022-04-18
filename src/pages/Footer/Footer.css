@@ -4,7 +4,7 @@
 }
 
 .imagine {
-  font-size: 50px;
+    font-size: 50px;
     color: #5865f2;
     font-weight: 800;
     line-height: 95%;
@@ -35,4 +35,34 @@
     box-shadow: rgba(13, 10, 20, 0.584) 0 8px 15px;
     transform: translateY(-2px);
     color: #fff;
+}
+
+
+.card{
+    opacity: 0.7!important;
+    background-color: black!important;
+    /* margin-top: 50px; */
+}
+.logintexts {
+    font-size: 18px;
+    color: #fff;
+}
+.askbtn:hover{
+  color: #405cf5;
+  font-size: 23px;
+  font-weight: 900;
+
+}
+.askbtn{
+    color: white;
+    transition: all 0.4s ease;
+    font-size: 18px;
+}
+.loginhedeing {
+    font-size: 40px;
+    color: #405cf5;
+    font-weight: 900;
+}
+.imgmargin{
+    margin-top: 150px;
 }
