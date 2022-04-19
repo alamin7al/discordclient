@@ -6,7 +6,10 @@ export default function NitroClassic() {
     return (
         <div className=' classicbackground' style={{ height: '100%', width: '100%' }}>
             <div className="container" >
-                <div className="row" >
+                <div
+                data-aos="fade-up"
+                
+                className="row" >
                     <div className="col-md-7 col-lg-6 col-sm-6 my-5" >
                         <div className="d-flex justify-content-center align-items-center" style={{ height: '100%' }}>
                             <div className="" style={{ textAlign: 'start' }}>

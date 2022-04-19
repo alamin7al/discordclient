@@ -54,20 +54,6 @@ export default function EditProfile() {
 
 
 
-  if (singleuser.length === 0) {
-    return (
-
-        <>
-            <div className="">
-               <h1 className='text-white lead '>Loading.........</h1>
-            </div>
-
-
-
-        </>
-    )
-}
-
 
 
 
@@ -79,6 +65,9 @@ export default function EditProfile() {
 
   return (
     <div >
+
+
+
       <form className='aboutdata ' onSubmit={handleSubmit(onSubmit)}>
     
 

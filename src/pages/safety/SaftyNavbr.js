@@ -75,6 +75,7 @@ export default function SaftyNavbr() {
 
 
 
+
                 </Navbar.Collapse>
 
             </Navbar>

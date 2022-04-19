@@ -8,7 +8,11 @@ export default function Relable() {
     return (
         <div style={{ background: '#F6F6F6', }} className='  clearfix'>
             <div className=' d-flex justify-content-center align-items-center  '  >
-                <div className=' '>
+                <div 
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                
+                className=' '>
                     <h1 className='discord-headline '>RELIABLE TECH FOR STAYING CLOSE</h1>
                     <p className='my-4 text-center' style={{ lineHeight: '1.6rem', fontSize: '17px' }}>Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch <br /> friends stream their  games, or gather up and have a drawing session with screen share.</p>
                     <img className='img-fluid ' src={pic} alt="" />

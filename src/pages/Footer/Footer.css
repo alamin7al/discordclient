@@ -1,4 +1,4 @@
-.icon-style a {
+.icon-styles a {
     margin: 0px 17px;
     color: #fff;
 }
@@ -38,8 +38,8 @@
 }
 
 
-.card{
-    opacity: 0.7!important;
+.cardregi{
+    opacity: 0.8!important;
     background-color: black!important;
     /* margin-top: 50px; */
 }

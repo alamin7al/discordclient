@@ -7,7 +7,12 @@ export default function DownloadHeader() {
 
         <div className='my-5' style={{ height: '100%', width: '100%' }}>
             <div className="container" style={{ height: '100%' }}>
-                <div className="row" style={{ height: '100%' }}>
+                <div
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+                
+                className="row" style={{ height: '100%' }}>
                     <div className="col-md-7 my-5" >
                         <div className="d-flex justify-content-center align-items-center" style={{ height: '100%' }}>
                             <div className="container" style={{ textAlign: 'start' }}>

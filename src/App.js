@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import './App.css';
 import {
   BrowserRouter, Routes, Route,
@@ -17,15 +18,30 @@ import Register from './pages/login/Register';
 
 import ProfileHome from './pages/profile/ProfileHome';
 import EditProfile from './pages/profile/EditProfile';
+import { Spinner } from 'react-bootstrap';
+import ScrollToTop from './pages/scrol/ScrollToTop';
 // const Navigation = lazy(() => import('./pages/Navigation/Navigation')) ;
 
 const Home = lazy(() => import('./pages/Home/Home'));
 function App() {
+AOS.init();
+
   return (
     <div className="App">
 
       <AuthProvider>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div style={{ marginTop: '250px' }}>
+            <Spinner animation="border" variant="dark" />
+            <Spinner animation="border" variant="dark" />
+            <Spinner animation="border" variant="dark" />
+            <Spinner animation="border" variant="dark" />
+            <Spinner animation="border" variant="dark" />
+            <Spinner animation="border" variant="dark" />
+            <Spinner animation="border" variant="dark" />
+            <Spinner animation="border" variant="dark" />
+            <Spinner animation="border" variant="dark" />
+
+          </div>}>
           <BrowserRouter>
             {/* <Navigation></Navigation> */}
             <Routes>
@@ -46,6 +62,7 @@ function App() {
           </BrowserRouter>
         </Suspense>
       </AuthProvider>
+      <ScrollToTop />
 
     </div>
   );

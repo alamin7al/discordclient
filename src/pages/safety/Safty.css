@@ -29,7 +29,8 @@
     font-size: 30px;
     line-height: 120%;
     text-align: start;
-    font-weight: 800;
+    font-weight: 900!important;
+
 }
 
 .control-text {

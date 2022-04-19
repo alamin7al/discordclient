@@ -10,7 +10,10 @@ const DiscordCard = () => {
     return (
         <div className='container my-5'>
 
-            <div className="row gx-5 gy-5">
+            <div
+                data-aos="fade-up"
+            
+            className="row gx-5 gy-5">
                 <div className="col-md-6 col-lg-4 col-sm-6 ">
                     <div className="card card1 " style={{ width: '100%',height:'350px' }}>
 

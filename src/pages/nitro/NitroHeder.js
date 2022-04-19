@@ -5,7 +5,10 @@ const NitroHeder = () => {
     return (
         <div className='my-5' style={{ height: '100%', width: '100%' }}>
             <div className="container" style={{ height: '100%' }}>
-                <div className="row" style={{ height: '100%' }}>
+                <div 
+                data-aos="fade-up"
+               
+                className="row" style={{ height: '100%' }}>
                     <div className="col-md-7 mb-5" >
                         <div className="d-flex justify-content-center align-items-center" style={{ height: '100%' }}>
                             <div className="" style={{textAlign:'start'}}>

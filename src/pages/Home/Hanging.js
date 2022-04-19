@@ -5,7 +5,11 @@ export default function Hanging() {
     return (
         <div style={{   }} className='container d-flex justify-content-center align-items-center my-5 hwall' >
             <div className='container h-100 w-100'>
-                <div className="row h-100 w-100 ">
+                <div
+                
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                className="row h-100 w-100 ">
 
                     <div className="col-md-5 d-flex justify-content-center align-items-center">
                         <div className=" text-start">

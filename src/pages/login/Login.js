@@ -59,7 +59,7 @@ const Login = () => {
         <div style={myStyle} className="p-5">
             <div className=''>
                 <div className="container ">
-                    <Card className='p-0'>
+                    <Card className='p-0 cardregi'>
                         <div style={{ marginTop: '' }} className="row">
                             <div className="col-lg-6 col-md-6 col-sm-12 my-5 text-white fw-lighter ">
                                 <h3 className='loginhedeing'>Welcome Back</h3>
@@ -85,7 +85,7 @@ const Login = () => {
                                             onChange={handleOnChange}
                                             id="exampleInputPassword1" />
                                     </div>
-                                    <div className="text-start text-white fw-bolder lead mt-1">
+                                    <div className="text-start mt-3">
                                         <button
                                             className='submitbtn'
                                             type='submit'

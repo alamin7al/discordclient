@@ -5,7 +5,11 @@ export default function Invite() {
     return (
 
         <div className='container d-flex justify-content-center align-items-center my-5 hwall'  >
-            <div className='container '>
+            <div
+            
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className='container '>
                 <div className="row ">
                     <div className="col-md-7  d-flex justify-content-start align-items-center ">
                         <img className='img-fluid' src={pic} alt="" />

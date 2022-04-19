@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="">
               <h1 className='imagine mt-5 '>IMAGINE <br /> A PLACE</h1>
               <h4 className='my-4'>English, USA ^</h4>
-              <div class="icon-style d-flex">
+              <div class="icon-styles d-flex">
                 <a href=""> <i class="fab fa-github fa-2x"></i> </a>
                 <a href=""> <i class="fab fa-facebook fa-2x"></i> </a>
                 <a href=""> <i class="fab fa-instagram fa-2x"></i> </a>

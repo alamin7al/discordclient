@@ -29,7 +29,7 @@ export default function Navigation() {
           </NavLink>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse id="basic-navbar-nav" className=''>
             <Nav className="mx-auto text-white">
               <NavLink className='navbarstyle' to='/home'> Home</NavLink>
               <NavLink className='navbarstyle' to='/download'> Download</NavLink>
@@ -38,7 +38,6 @@ export default function Navigation() {
               <NavLink className='navbarstyle' to='/blog'> Blog</NavLink>
               <NavLink className='navbarstyle' to='/help'> Support</NavLink>
               <NavLink className='navbarstyle' to='/carer'> Carer</NavLink>
-
             </Nav>
             <Nav className="">
             {
@@ -56,7 +55,7 @@ export default function Navigation() {
                                         <NavLink className='w-25 h-25' to='/profile'>
                                             <div className="profileedit text-center">
                                                 <p className='text-center m-0 logoutbtn'>MY Profile</p>
-                                                <button className='logoutbtn' onClick={logOut}>Logout</button>
+                                                <button className='logoutbtn' onClick={logOut}>LogOut</button>
                                             </div>
                                         </NavLink>
                                     </NavDropdown>
@@ -69,13 +68,8 @@ export default function Navigation() {
                                 </button>
                             </Link>
                     }
-
             </Nav>
-
-
-
           </Navbar.Collapse>
-
         </Navbar >
       </div >
     </div>

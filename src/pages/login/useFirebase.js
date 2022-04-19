@@ -1,9 +1,9 @@
-import React from 'react';
+
 import { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword, signOut, createUserWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, updateProfile } from "firebase/auth";
 import { useEffect } from 'react';
 import initializeFirebase from './firebase.init';
-// import initializeFirebase from './firebase.init';
+
 initializeFirebase()
 const useFarebase = () => {
         const [user, setUser] = useState({})
@@ -12,7 +12,6 @@ const useFarebase = () => {
         // const [admin, setAdmin] = useState(false)
         const auth = getAuth();
         const provider = new GoogleAuthProvider();
-
         //sigin
         const loginInUser = (email, password, location, navigate) => {
             setLoading(true)
@@ -79,6 +78,8 @@ const useFarebase = () => {
             setLoading(true)
             signOut(auth).then(() => {
                 // Sign-out successful.
+                // navigate('/home')
+
             }).catch((error) => {
                 // An error happened.
             })

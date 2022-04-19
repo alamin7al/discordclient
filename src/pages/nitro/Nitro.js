@@ -21,18 +21,18 @@ const Nitro = () => {
     return (
         <div>
             <Suspense fallback={
-            <div style={{marginTop:'250px'}}>
-            <Spinner  animation="border" variant="dark" />
-            <Spinner  animation="border" variant="dark" />
-            <Spinner  animation="border" variant="dark" />
-            <Spinner  animation="border" variant="dark" />
-            <Spinner  animation="border" variant="dark" />
-            <Spinner  animation="border" variant="dark" />
-            <Spinner  animation="border" variant="dark" />
-            <Spinner  animation="border" variant="dark" />
-            <Spinner  animation="border" variant="dark" />
-           
-          </div>}>
+                <div style={{ marginTop: '250px' }}>
+                    <Spinner animation="border" variant="dark" />
+                    <Spinner animation="border" variant="dark" />
+                    <Spinner animation="border" variant="dark" />
+                    <Spinner animation="border" variant="dark" />
+                    <Spinner animation="border" variant="dark" />
+                    <Spinner animation="border" variant="dark" />
+                    <Spinner animation="border" variant="dark" />
+                    <Spinner animation="border" variant="dark" />
+                    <Spinner animation="border" variant="dark" />
+
+                </div>}>
 
                 <div className="nitro">
                     <NitroNavigation></NitroNavigation>

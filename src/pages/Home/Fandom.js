@@ -4,7 +4,11 @@ export default function Fandom() {
   return (
     <div  className='container d-flex justify-content-center align-items-center my-5 hwall'  >
     <div className='container h-100 w-100'>
-        <div className="row h-100 w-100">
+        <div
+        
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="row h-100 w-100">
             <div className="col-md-7 d-flex justify-content-start align-items-center ">
                 <img className='img-fluid' src={pic} alt="" />
             </div>

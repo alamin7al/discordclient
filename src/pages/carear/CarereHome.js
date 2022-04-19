@@ -24,9 +24,11 @@ export default function CarereHome() {
 
           </div>}></Suspense>
         <SaftyNavbr />
-        <CarereHeder />
-        <CarererMain />
-        <CarereFilter />
+        <div style={{ background: '#F6F6F6' }}>
+          <CarereHeder />
+          <CarererMain />
+          <CarereFilter />
+        </div>
         <Footer />
       </div>
     </div>

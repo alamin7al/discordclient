@@ -59,7 +59,7 @@ const Register = () => {
         <div style={myStyle} className="p-5">
             <div className=''>
                 <div className="container ">
-                    <Card className='p-0'>
+                    <Card className='p-0 cardregi'>
                         <div style={{ marginTop: '' }} className="row">
                             <div className="col-lg-6 col-md-6 col-sm-12 my-5 text-white fw-lighter ">
                                 <h3 className='loginhedeing'>Welcome Back</h3>
@@ -120,12 +120,9 @@ const Register = () => {
                                     </div>
                                     <div className="text-start mt-3">
                                         <button
-
                                             className='submitbtn'
                                             type='submit'
                                         >
-
-
                                             Login</button>
                                     </div>
 

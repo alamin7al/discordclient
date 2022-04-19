@@ -11,7 +11,12 @@ const Ios = () => {
     return (
         <div className="my-5">
             <div className='container '>
-                <div className="row ">
+                <div
+                
+                data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
+                className="row ">
                     <div className="col-md-6 gy-5">
                         <div style={{}} className="">
                             <div className='p-5 textstyle' style={{ width: '100%', background: '#F6F6F6' }}>
