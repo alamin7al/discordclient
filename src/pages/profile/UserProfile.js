@@ -47,7 +47,7 @@ console.log(singleuser);
             return (
               <>
                 <Link key={i} to={`/edit/${s._id}`}>
-                  <button className='editbtn fw-lighter text-uppercase text-start fs-1'><FaUserEdit className='fs-2' /> Edit Profile </button>
+                  {/* <button className='editbtn fw-lighter text-uppercase text-start fs-1'><FaUserEdit className='fs-2' /> Edit Profile </button> */}
                 </Link>
               </>
             )

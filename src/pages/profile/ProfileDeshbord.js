@@ -24,7 +24,7 @@ export default function ProfileDeshbord() {
                                 <button onClick={() => setNav("fill")} className='aboutbtn fw-lighter text-uppercase text-start"'><HiInformationCircle className='fs-2' /> Information </button>
                                 <button onClick={() => setNav("about")} className='aboutbtn fw-lighter text-uppercase text-start"'><BsFillPersonFill className='fs-2' /> About </button>
                                 {
-                                    singleuser.map((s, i) => <>
+                                    singleuser.slice(0,1).map((s, i) => <>
                                         <Link key={i} to={`/edit/${s._id}`}>
                                             <button className='editbtn my-4 fw-lighter text-uppercase text-start"'><FaUserEdit className='fs-2' /> Edit Profile </button>
                                         </Link>

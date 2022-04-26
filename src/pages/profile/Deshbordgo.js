@@ -43,7 +43,7 @@ console.log(singleuser);
         </div>
 
         {
-          singleuser.map((s, i) => {
+          singleuser.slice(0,1).map((s, i) => {
             return (
               <>
                 <Link key={i} to='/profile'>
