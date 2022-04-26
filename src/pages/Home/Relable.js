@@ -3,6 +3,7 @@ import pic from '../img/home3.svg'
 import pic2 from '../img/home6.svg'
 import { BsDownload } from 'react-icons/bs';
 import Footer from '../Footer/Footer';
+import DownloadModal from '../download/DownloadModal';
 
 export default function Relable() {
     return (
@@ -20,7 +21,7 @@ export default function Relable() {
                     <div className='' style={{ background: '#F6F6F6', width: 'auto', height: '300px' }}>
                         <img className='img-fluid' src={pic2} alt="" />
                         <h3 className='discord-relable'>Ready to start your journey?</h3>
-                        <button className='btnheder4 mt-5'><BsDownload className='fs-5'></BsDownload> Download For Windows</button>
+                        <button className='btnheder4 mt-5 '><BsDownload className='fs-5'></BsDownload> <DownloadModal/></button>
                     </div>
 
                 </div>

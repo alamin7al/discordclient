@@ -35,3 +35,15 @@
 .textstyle h3{
    margin:20px;
 }
+
+.downloadmodalbtn{
+    border: 0;
+    outline: 0;
+
+
+    background-color: transparent;
+}
+.downloadmodalbtn:hover{
+    color: white;
+}
+

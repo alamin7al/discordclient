@@ -55,11 +55,28 @@
 }
 
 
-@media(max-width:768px) {}
+.profileheight {
+    height: 300px;
+}
 
-@media only screen and (max-width: 500px) {}
 
-@media screen and (max-width: 800px) {}
+@media(max-width:768px) {
+    .profileheight {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .profileheight {
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .profileheight {
+        height: 500px;
+    }
+}
 
 td {
     font-size: 20px;
@@ -67,26 +84,7 @@ td {
 
 .aboutdata {
     box-shadow: 2px 1px 1px rgba(54, 47, 145, 0.75);
-padding: 10px;
-}
-
-.submitbtn {
-    appearance: button;
-    backface-visibility: hidden;
-    background-color: #405cf5;
-    border-radius: 6px;
-    border-width: 0;
-    padding: 8px 29px;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.5s ease-in;
-    width: auto;
-    margin-bottom: 20px;
-}
-
-.submitbtn:hover{
-    background-color: white;
-    color: black;
+    padding: 10px;
 }
 
 
@@ -109,9 +107,30 @@ input {
     color: #fff;
     transition: all 0.6s ease;
 }
-.phtotext:hover{
+
+.phtotext:hover {
     font-size: 30px;
     border-bottom: 2px solid #fff;
     padding-bottom: 10px;
 }
 
+
+
+.submitbtn {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    padding: 8px 29px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.submitbtn:hover {
+    background-color: white;
+    color: black;
+}

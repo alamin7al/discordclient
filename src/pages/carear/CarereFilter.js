@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { GiRoyalLove } from 'react-icons/gi';
 import FilterData from './FiterData';
 
 export default function CarereFilter() {

@@ -1,6 +1,7 @@
 import React from 'react'
 import nitroimg from '../img/d1.svg'
 import { BsDownload } from 'react-icons/bs';
+import DownloadModal from './DownloadModal';
 
 export default function DownloadHeader() {
     return (
@@ -23,8 +24,8 @@ export default function DownloadHeader() {
 
                                 <p style={{ fontSize: '16px', lineHeight: '140%' }} className='text-white mb-5'>An adventure awaits. Hang out with your friends on our desktop app and keep the conversation going on mobile.
                                 </p>
-                                <div style={{width:'450px'}} className="d-flex justify-content-start align-items-center ">
-                                    <button className='btnheder4 '><BsDownload className='fs-5'></BsDownload> Download For Windows</button> 
+                                <div style={{width:'auto'}} className="d-flex justify-content-start align-items-center ">
+                                    <button className='btnheder4 '><BsDownload className='fs-5'></BsDownload> <DownloadModal/></button> 
                                     <p className='ms-3 text-white mt-4 hedertext'>   Windows 7 or higher
                                     </p>
                                 </div>

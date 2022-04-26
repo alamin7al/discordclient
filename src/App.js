@@ -1,47 +1,63 @@
 import React, { Suspense, lazy } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Spinner } from 'react-bootstrap';
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import './App.css';
 import {
   BrowserRouter, Routes, Route,
 } from "react-router-dom";
-import Nitro from './pages/nitro/Nitro';
-import DownloadHome from './pages/download/DownloadHome';
-import SaftyHome from './pages/safety/SaftyHome';
-import BlogHome from './pages/blog/BlogHome';
-import HelpHome from './pages/Help/HelpHome';
-import CarereHome from './pages/carear/CarereHome';
-import Login from './pages/login/Login';
-import AuthProvider from './pages/login/AuthProvider';
-import Register from './pages/login/Register';
-
-import ProfileHome from './pages/profile/ProfileHome';
-import EditProfile from './pages/profile/EditProfile';
-import { Spinner } from 'react-bootstrap';
-import ScrollToTop from './pages/scrol/ScrollToTop';
-// const Navigation = lazy(() => import('./pages/Navigation/Navigation')) ;
-
 const Home = lazy(() => import('./pages/Home/Home'));
+const Deshbordgo = lazy(() => import('./pages/profile/Deshbordgo'));
+
+const Nitro = lazy(() => import('./pages/nitro/Nitro'));
+
+const DownloadHome = lazy(() => import('./pages/download/DownloadHome'));
+
+const SaftyHome = lazy(() => import('./pages/safety/SaftyHome'));
+
+const BlogHome = lazy(() => import('./pages/blog/BlogHome'));
+
+const HelpHome = lazy(() => import('./pages/Help/HelpHome'));
+
+const CarereHome = lazy(() => import('./pages/carear/CarereHome'));
+
+const Login = lazy(() => import('./pages/login/Login'));
+
+const AuthProvider = lazy(() => import('./pages/login/AuthProvider'));
+
+const Register = lazy(() => import('./pages/login/Register'));
+
+
+// import ProfileHome from './pages/profile/ProfileHome';
+const EditProfile = lazy(() => import('./pages/profile/EditProfile'));
+
+
+const ScrollToTop = lazy(() => import('./pages/scrol/ScrollToTop'));
+
+const ProfileHome = lazy(() => import('./pages/profile/ProfileHome'));
+
 function App() {
-AOS.init();
+  AOS.init();
 
   return (
     <div className="App">
 
-      <AuthProvider>
-        <Suspense fallback={<div style={{ marginTop: '250px' }}>
-            <Spinner animation="border" variant="dark" />
-            <Spinner animation="border" variant="dark" />
-            <Spinner animation="border" variant="dark" />
-            <Spinner animation="border" variant="dark" />
-            <Spinner animation="border" variant="dark" />
-            <Spinner animation="border" variant="dark" />
-            <Spinner animation="border" variant="dark" />
-            <Spinner animation="border" variant="dark" />
-            <Spinner animation="border" variant="dark" />
+      <Suspense fallback={<div style={{ marginTop: '250px' }}>
+        <Spinner animation="border" variant="dark" />
+        <Spinner animation="border" variant="dark" />
+        <Spinner animation="border" variant="dark" />
+        <Spinner animation="border" variant="dark" />
+        <Spinner animation="border" variant="dark" />
+        <Spinner animation="border" variant="dark" />
+        <Spinner animation="border" variant="dark" />
+        <Spinner animation="border" variant="dark" />
+        <Spinner animation="border" variant="dark" />
 
-          </div>}>
+      </div>}>
+        <AuthProvider>
+
           <BrowserRouter>
             {/* <Navigation></Navigation> */}
             <Routes>
@@ -55,14 +71,15 @@ AOS.init();
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/profile" element={<ProfileHome />} />
-              <Route path="edit/:editid" element={<EditProfile />} />
+              <Route path="/deshbordgo" element={<Deshbordgo />} />
+              <Route path={`/edit/:id`} element={<EditProfile />} />
               <Route path="/" element={<Home />} />
 
             </Routes>
           </BrowserRouter>
-        </Suspense>
-      </AuthProvider>
-      <ScrollToTop />
+        </AuthProvider>
+        <ScrollToTop />
+      </Suspense>
 
     </div>
   );

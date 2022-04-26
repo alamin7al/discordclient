@@ -6,29 +6,33 @@ import img4 from '../img/d5.svg'
 
 
 import { RiArrowDownSLine } from 'react-icons/ri';
+import ModalIos from './ModalIos';
 
 const Ios = () => {
     return (
         <div className="my-5">
             <div className='container '>
                 <div
-                
-                data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500"
-                className="row ">
+
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+                    className="row ">
                     <div className="col-md-6 gy-5">
                         <div style={{}} className="">
                             <div className='p-5 textstyle' style={{ width: '100%', background: '#F6F6F6' }}>
                                 <h3>iOS</h3>
-                                <button className='commonnbtn'>Download</button>
+                                <button className='downloadmodalbtn'>
+                                    <ModalIos />
+                                </button>
                                 <img className='w-100 h-100 mx-auto' src={img1} alt="" />
                             </div>
                         </div>
                         <div style={{}}>
                             <div className='p-5 textstyle' style={{ width: '100%', background: '#F6F6F6' }}>
                                 <h3>iOS</h3>
-                                <button className='commonnbtn'>Download</button>
+                                <button className='downloadmodalbtn'>                                    <ModalIos />
+                                </button>
                                 <img className='w-100 h-100 mx-auto' src={img2} alt="" />
                             </div>
                         </div>
@@ -41,14 +45,16 @@ const Ios = () => {
                             <div style={{}} className="">
                                 <div className='p-5 textstyle' style={{ width: '100%', background: '#F6F6F6' }}>
                                     <h3>Android</h3>
-                                    <button className='commonnbtn'>Download</button>
+                                    <button className='downloadmodalbtn'>                                    <ModalIos />
+                                    </button>
                                     <img className='w-100 h-100 mx-auto' src={img3} alt="" />
                                 </div>
                             </div>
                             <div style={{}}>
                                 <div className='p-5 textstyle' style={{ width: '100%', background: '#F6F6F6' }}>
                                     <h3>Mac</h3>
-                                    <button className='commonnbtn'>Download</button>
+                                    <button className='downloadmodalbtn'>                                    <ModalIos />
+                                    </button>
                                     <img className='w-100 h-100 mx-auto' src={img4} alt="" />
                                 </div>
                             </div>
@@ -61,10 +67,10 @@ const Ios = () => {
                         <div className='text-start '>
                             <div className='p-5 textstyle text-start' style={{ width: '100%', background: '#F6F6F6' }}>
                                 <h3 className='lh-lg '>Feeling experimental?</h3>
-                                <p style={{fontSize:'18px'}} className='lh-base '>Try our Public Test Build and test new features before they launch.</p>
+                                <p style={{ fontSize: '18px' }} className='lh-base '>Try our Public Test Build and test new features before they launch.</p>
 
 
-                              
+
 
 
 

@@ -5,7 +5,7 @@ import { FaUserEdit } from 'react-icons/fa';
 import useAuth from '../login/useAuth'
 import pr from '../img/profileimgicon.png'
 // import EditProfile from './EditProfile'
-export default function UserProfile() {
+export default function Deshbordgo() {
   const { user, singleuser } = useAuth()
 console.log(singleuser);
 
@@ -46,8 +46,8 @@ console.log(singleuser);
           singleuser.map((s, i) => {
             return (
               <>
-                <Link key={i} to={`/edit/${s._id}`}>
-                  <button className='editbtn fw-lighter text-uppercase text-start fs-1'><FaUserEdit className='fs-2' /> Edit Profile </button>
+                <Link key={i} to='/profile'>
+                  <button className='editbtn fw-lighter text-uppercase text-start fs-1'><FaUserEdit className='fs-2' /> Deshbord </button>
                 </Link>
               </>
             )

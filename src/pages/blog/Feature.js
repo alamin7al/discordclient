@@ -4,6 +4,8 @@ import b2 from '../img/f2.png'
 import b3 from '../img/f3.png'
 import b4 from '../img/f4.png'
 import b5 from '../img/f5.png'
+import BlogModalthree from './BlogModalthree';
+import CollectionModal from './CollectionModal';
 function Feature() {
     return (
         <div className='my-5'>
@@ -23,10 +25,10 @@ function Feature() {
                             <img className='img-fliuid' src={b1} alt="" />
                             <p className='featuretext'>
                                 Announcements, new features, and general info about the Discord app.</p>
-                            <button className='blogbtn'>
-                                View Collection
+                       
+                                <CollectionModal/>
 
-                            </button>
+                         
                         </div>
                     </div>
                     <div className="col-lg-8 my-5">
@@ -34,8 +36,7 @@ function Feature() {
                             <div className="col-lg-12 my-5">
                                 <div className='text-start'>
                                     <img src={b2} className='img-fluid rounded-3' alt="" />
-                                    <h3 className='ftitle my-4'>Starting Now, Nitro Users Get 3 Months of Picsart Gold
-
+                                    <h3 className='ftitle my-4'> <BlogModalthree/>
                                     </h3>
                                 </div>
                             </div>
