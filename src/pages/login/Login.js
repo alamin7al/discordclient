@@ -8,7 +8,7 @@ import {
     useLocation,
     useNavigate
 } from "react-router-dom";
-import { Card } from 'react-bootstrap';
+import { Card, Spinner } from 'react-bootstrap';
 import useAuth from './useAuth';
 import loginimg from '../img/login.webp'
 import qr from '../img/qr.png'
@@ -48,7 +48,7 @@ const Login = () => {
         width: '100%',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        opacity:'0.9'
+        opacity: '0.9'
 
     };
 
@@ -67,8 +67,8 @@ const Login = () => {
                                 <form
                                     className='container'
                                     onSubmit={handleOnSubmit}>
-                                    <div className="mb-3 text-start text-white fw-bolder lead">
-                                        <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                    <div className="mb-1 text-start text-white fw-bolder lead">
+                                        <label for="exampleInputEmail1" className="form-label fs-4">Email address</label>
                                         <input
                                             name='email'
                                             type="email" className="form-control" id="exampleInputEmail1"
@@ -76,8 +76,8 @@ const Login = () => {
                                             placeholder='Type Your Email'
                                             aria-describedby="emailHelp" />
                                     </div>
-                                    <div className="mb-3 text-start text-white fw-bolder lead">
-                                        <label for="exampleInputPassword1" className="form-label">Password</label>
+                                    <div className="mb-1 text-start text-white fw-bolder lead">
+                                        <label for="exampleInputPassword1" className="form-label fs-4">Password</label>
                                         <input
                                             name='password'
                                             placeholder='Type Your Password'
@@ -94,11 +94,24 @@ const Login = () => {
                                     </div>
 
                                     {loading && <div>
-                                        <div class="spinner-grow text-dark" role="status">
-                                            <span class="visually-hidden">Loading...</span>
-                                        </div><div class="spinner-grow text-dark" role="status">
-                                            <span class="visually-hidden">Loading...</span>
-                                        </div>
+                                        <>
+                                            <Spinner animation="border" variant="primary" />
+                                            <Spinner animation="border" variant="secondary" />
+                                            <Spinner animation="border" variant="success" />
+                                            <Spinner animation="border" variant="danger" />
+                                            <Spinner animation="border" variant="warning" />
+                                            <Spinner animation="border" variant="info" />
+                                            <Spinner animation="border" variant="light" />
+                                            <Spinner animation="border" variant="dark" />
+                                            <Spinner animation="grow" variant="primary" />
+                                            <Spinner animation="grow" variant="secondary" />
+                                            <Spinner animation="grow" variant="success" />
+                                            <Spinner animation="grow" variant="danger" />
+                                            <Spinner animation="grow" variant="warning" />
+                                            <Spinner animation="grow" variant="info" />
+                                            <Spinner animation="grow" variant="light" />
+                                            <Spinner animation="grow" variant="dark" />
+                                        </>
                                     </div>}
                                     {user?.email &&
                                         <div class="alert alert-success" role="alert">

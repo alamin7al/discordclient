@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Spinner } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import useAuth from '../login/useAuth'
 
@@ -15,7 +16,6 @@ export default function About() {
 
       )
   }, [user?.email])
-  console.log(singleuser);
 
   // if (singleuser.length === 0) {
   //   <h3 className='text-white display-3'>loading...</h3>
@@ -24,10 +24,29 @@ export default function About() {
 
   return (
     <>
-      {/* {
-          singleuser.length === 0 ? <h4 className='display-6 text-white'>Loading...</h4> : ''
+      {
+          singleuser.length === 0 ? <div style={{ marginTop: '10px' }}>
+          <>
+  <Spinner animation="border" variant="primary" />
+  <Spinner animation="border" variant="secondary" />
+  <Spinner animation="border" variant="success" />
+  <Spinner animation="border" variant="danger" />
+  <Spinner animation="border" variant="warning" />
+  <Spinner animation="border" variant="info" />
+  <Spinner animation="border" variant="light" />
+  <Spinner animation="border" variant="dark" />
+  <Spinner animation="grow" variant="primary" />
+  <Spinner animation="grow" variant="secondary" />
+  <Spinner animation="grow" variant="success" />
+  <Spinner animation="grow" variant="danger" />
+  <Spinner animation="grow" variant="warning" />
+  <Spinner animation="grow" variant="info" />
+  <Spinner animation="grow" variant="light" />
+  <Spinner animation="grow" variant="dark" />
+</>
+        </div> : ''
         }
-      */}
+     
    
 
         <div className='  aboutdata w-100 h-100 '>

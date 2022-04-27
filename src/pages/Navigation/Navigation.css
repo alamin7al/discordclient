@@ -135,12 +135,23 @@
 .discordtext {
     font-size: 50px;
 }
-
+.logout{
+    color: #fff!important;
+}
 .nitrobtn1:hover {
     box-shadow: rgba(13, 10, 20, 0.584) 0 8px 15px;
     transform: translateY(-2px);
     background-color: #36393F;
 
+}
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff!important;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
 .discord-heder {

@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Spinner } from 'react-bootstrap';
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 import './App.css';
@@ -10,40 +9,23 @@ import {
 } from "react-router-dom";
 const Home = lazy(() => import('./pages/Home/Home'));
 const Deshbordgo = lazy(() => import('./pages/profile/Deshbordgo'));
-
 const Nitro = lazy(() => import('./pages/nitro/Nitro'));
-
 const DownloadHome = lazy(() => import('./pages/download/DownloadHome'));
-
 const SaftyHome = lazy(() => import('./pages/safety/SaftyHome'));
-
 const BlogHome = lazy(() => import('./pages/blog/BlogHome'));
-
 const HelpHome = lazy(() => import('./pages/Help/HelpHome'));
-
 const CarereHome = lazy(() => import('./pages/carear/CarereHome'));
-
 const Login = lazy(() => import('./pages/login/Login'));
-
 const AuthProvider = lazy(() => import('./pages/login/AuthProvider'));
-
-const Register = lazy(() => import('./pages/login/Register'));
-
-
+const Register = lazy(() => import('./pages/login/Register'))
 // import ProfileHome from './pages/profile/ProfileHome';
 const EditProfile = lazy(() => import('./pages/profile/EditProfile'));
-
-
 const ScrollToTop = lazy(() => import('./pages/scrol/ScrollToTop'));
-
 const ProfileHome = lazy(() => import('./pages/profile/ProfileHome'));
-
 function App() {
   AOS.init();
-
   return (
     <div className="App">
-
       <Suspense fallback={<div style={{ marginTop: '250px' }}>
         <Spinner animation="border" variant="dark" />
         <Spinner animation="border" variant="dark" />
@@ -54,10 +36,8 @@ function App() {
         <Spinner animation="border" variant="dark" />
         <Spinner animation="border" variant="dark" />
         <Spinner animation="border" variant="dark" />
-
       </div>}>
         <AuthProvider>
-
           <BrowserRouter>
             {/* <Navigation></Navigation> */}
             <Routes>

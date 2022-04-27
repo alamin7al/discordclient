@@ -62,8 +62,8 @@ function BlogModal() {
 
     return (
         <>
-            <button className="blogmodal" onClick={() => setModalShow(true)}>
-                Calixta’s Guide to Navigating the Voice Acting Industry
+            <button style={{ color: '#5865f2',fontSize:'18px' }} className="blogmodal" onClick={() => setModalShow(true)}>
+               Details
             </button>
 
             <MydModalWithGrid show={modalShow} onHide={() => setModalShow(false)} />

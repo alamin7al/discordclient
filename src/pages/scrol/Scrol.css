@@ -7,6 +7,16 @@
     right: 25px;
     z-index: 20;
   }
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff!important;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  }
+  
   .icon-style{
     background-color: #551B54;
     border: 2px solid #fff;

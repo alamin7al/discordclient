@@ -4,20 +4,31 @@ import { FaUserEdit } from 'react-icons/fa';
 
 import useAuth from '../login/useAuth'
 import pr from '../img/profileimgicon.png'
+import { Spinner } from 'react-bootstrap';
 // import EditProfile from './EditProfile'
 export default function UserProfile() {
   const { user, singleuser } = useAuth()
-console.log(singleuser);
+  console.log(singleuser);
 
 
 
   if (singleuser.length === 0) {
-    <h3 className='text-white display-3'>loading...</h3>
+    <>
+      <Spinner animation="border" variant="primary" />
+      <Spinner animation="border" variant="secondary" />
+    </>
   }
 
   return (
     <div className='profileheight' style={{ width: '100%', background: '#404EED' }}>
       <div className="d-flex justify-content-between align-items-center h-100 container">
+
+        {
+          singleuser.length === 0 ? <>
+            <Spinner animation="border" variant="primary" />
+            <Spinner animation="border" variant="secondary" />
+          </> : ''
+        }
 
         <div className="">
 

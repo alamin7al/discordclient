@@ -4,6 +4,7 @@ import b2 from '../img/c2.png'
 import b3 from '../img/c3.jpeg'
 import b4 from '../img/c4.png'
 import b5 from '../img/c5.png'
+import BlogModal from './BlogModal';
 import BlogModalthree from './BlogModalthree';
 import CollectionModal from './CollectionModal';
 function Featurec() {
@@ -43,7 +44,12 @@ function Featurec() {
                             <div className="col-lg-4 col-md-4">
                                 <div className='text-start'>
                                     <img src={b3} style={{width:'100%',height:'150px'}}  className='rounded-3 ' alt="" />
-                                    <h3 className='ftitle my-4'>Starting Now, Nitro Users Get 3 Months of Picsart Gold
+                                      
+                                    <div className="d-flex justify-content-between align-items-center">
+                                    
+                                        <h5 className='blogtile  m-0 p-0'> <BlogModal /> </h5>
+                                    </div>
+                                    <h3 className='ftitle my-2'>Starting Now, Nitro Users Get 3 Months of Picsart Gold
 
                                     </h3>
                                 </div>
@@ -51,7 +57,12 @@ function Featurec() {
                             <div className="col-lg-4 col-md-4">
                                 <div className='text-start'>
                                     <img src={b4} style={{width:'100%',height:'150px'}} className=' rounded-3' alt="" />
-                                    <h3 className='ftitle my-4'>Starting Now, Nitro Users Get 3 Months of Picsart Gold
+                                      
+                                    <div className="d-flex justify-content-between align-items-center">
+                                    
+                                        <h5 className='blogtile  m-0 p-0'> <BlogModal /> </h5>
+                                    </div>
+                                    <h3 className='ftitle my-2'>Starting Now, Nitro Users Get 3 Months of Picsart Gold
 
                                     </h3>
                                 </div>
@@ -59,7 +70,12 @@ function Featurec() {
                             <div className="col-lg-4 col-md-4">
                                 <div className='text-start'>
                                     <img src={b5} style={{width:'100%',height:'150px'}} className=' rounded-3' alt="" />
-                                    <h3 className='ftitle my-4'>Starting Now, Nitro Users Get 3 Months of Picsart Gold
+                                      
+                                    <div className="d-flex justify-content-between align-items-center">
+                                    
+                                        <h5 className='blogtile  m-0 p-0'> <BlogModal /> </h5>
+                                    </div>
+                                    <h3 className='ftitle my-2'>Starting Now, Nitro Users Get 3 Months of Picsart Gold
 
                                     </h3>
                                 </div>

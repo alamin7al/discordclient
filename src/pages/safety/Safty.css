@@ -24,7 +24,16 @@
     line-height: 140%;
     white-space: break-spaces;
 }
-
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff!important;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  }
+  
 .principleText {
     font-size: 30px;
     line-height: 120%;

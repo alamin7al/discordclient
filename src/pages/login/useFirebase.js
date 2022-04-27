@@ -1,3 +1,4 @@
+import { Navigate } from 'react-router-dom';
 
 import { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword, signOut, createUserWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, updateProfile } from "firebase/auth";
@@ -79,7 +80,7 @@ const useFarebase = () => {
         signOut(auth).then(() => {
             // Sign-out successful.
             // navigate('/home')
-
+            Navigate('/')
         }).catch((error) => {
             // An error happened.
         })

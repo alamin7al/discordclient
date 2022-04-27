@@ -9,7 +9,7 @@ export default function Navigation() {
   const UserMenu = (
     <Image
       src={user.photoURL}
-      
+
       roundedCircle
       style={{ height: '40px', width: '40px', }}
     />
@@ -40,34 +40,40 @@ export default function Navigation() {
               <NavLink className='navbarstyle' to='/carer'> Carer</NavLink>
             </Nav>
             <Nav className="">
-            {
-                        user?.email ?
-                            <div>
-                                {
-                                    user?.photoURL ? <NavDropdown className='' id="" title={UserMenu}>
-                                        <NavLink className='w-25 h-25' to='/profile'>
-                                            <div className="profileedit text-center">
-                                                <p className='text-center m-0 logoutbtn'>MY Profile</p>
-                                                <button className='logoutbtn' onClick={logOut}>LogOut</button>
-                                            </div>
-                                        </NavLink>
-                                    </NavDropdown> : <NavDropdown className='text-white' id="" title='logout'>
-                                        <NavLink className='w-25 h-25' to='/profile'>
-                                            <div className="profileedit text-center">
-                                                <p className='text-center m-0 logoutbtn'>MY Profile</p>
-                                                <button className='logoutbtn' onClick={logOut}>LogOut</button>
-                                            </div>
-                                        </NavLink>
-                                    </NavDropdown>
-                                }
-                            </div>
+              {
+                user?.email ?
+                  <div>
+                    {
+                      user?.photoURL ? <NavDropdown className='' id="" title={UserMenu}>
+                        <NavLink className='w-25 h-25' to='/profile'>
+                          <div className="profileedit text-center">
+                            <p className='text-center m-0 logoutbtn'>MY Profile</p>
+                            <Link to='/'>
 
-                            : <Link className='text-dark text-decoration-none fs-5 text-dark' to='/login'>
-                                <button className='btnheder'>
-                                    Login
-                                </button>
+                              <button className='logoutbtn' onClick={logOut}>LogOut</button>
                             </Link>
+                          </div>
+                        </NavLink>
+                      </NavDropdown> : <NavDropdown className='logout' id="" title='logout'>
+                        <NavLink className='w-25 h-25' to='/profile'>
+                          <div className="profileedit text-center">
+                            <p className='text-center m-0 logoutbtn'>MY Profile</p>
+                            <Link to='/'>
+
+                              <button className='logoutbtn' onClick={logOut}>LogOut</button>
+                            </Link>
+                          </div>
+                        </NavLink>
+                      </NavDropdown>
                     }
+                  </div>
+
+                  : <Link className='text-dark text-decoration-none fs-5 text-dark' to='/login'>
+                    <button className='btnheder'>
+                      Login
+                    </button>
+                  </Link>
+              }
             </Nav>
           </Navbar.Collapse>
         </Navbar >

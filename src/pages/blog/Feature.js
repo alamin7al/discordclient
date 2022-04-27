@@ -4,6 +4,7 @@ import b2 from '../img/f2.png'
 import b3 from '../img/f3.png'
 import b4 from '../img/f4.png'
 import b5 from '../img/f5.png'
+import BlogModal from './BlogModal';
 import BlogModalthree from './BlogModalthree';
 import CollectionModal from './CollectionModal';
 function Feature() {
@@ -25,10 +26,10 @@ function Feature() {
                             <img className='img-fliuid' src={b1} alt="" />
                             <p className='featuretext'>
                                 Announcements, new features, and general info about the Discord app.</p>
-                       
-                                <CollectionModal/>
 
-                         
+                            <CollectionModal />
+
+
                         </div>
                     </div>
                     <div className="col-lg-8 my-5">
@@ -36,7 +37,9 @@ function Feature() {
                             <div className="col-lg-12 my-5">
                                 <div className='text-start'>
                                     <img src={b2} className='img-fluid rounded-3' alt="" />
-                                    <h3 className='ftitle my-4'> <BlogModalthree/>
+
+
+                                    <h3 className='ftitle my-4'> <BlogModalthree />
                                     </h3>
                                 </div>
                             </div>
@@ -44,24 +47,40 @@ function Feature() {
                         <div className="row gx-2 gy-5">
                             <div className="col-lg-4 col-md-4">
                                 <div className='text-start'>
-                                    <img src={b3} style={{width:'100%',height:'150px'}}  className='rounded-3 ' alt="" />
-                                    <h3 className='ftitle my-4'>Starting Now, Nitro Users Get 3 Months of Picsart Gold
+                                    <img src={b3} style={{ width: '100%', height: '150px' }} className='rounded-3 ' alt="" />
+                                    
+                                    <div className="d-flex justify-content-between align-items-center">
+                                    
+                                        <h5 className='blogtile  m-0 p-0'> <BlogModal /> </h5>
+                                    </div>
+                                    <h3 className='ftitle my-2'>Starting Now, Nitro Users Get 3 Months of Picsart Gold
 
                                     </h3>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-4">
                                 <div className='text-start'>
-                                    <img src={b4} style={{width:'100%',height:'150px'}} className=' rounded-3' alt="" />
-                                    <h3 className='ftitle my-4'>Starting Now, Nitro Users Get 3 Months of Picsart Gold
+                                    <img src={b4} style={{ width: '100%', height: '150px' }} className=' rounded-3' alt="" />
+  
+                                    <div className="d-flex justify-content-between align-items-center">
+                                    
+                                        <h5 className='blogtile  m-0 p-0'> <BlogModal /> </h5>
+                                    </div>
+
+                                    <h3 className='ftitle my-2'>Starting Now, Nitro Users Get 3 Months of Picsart Gold
 
                                     </h3>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-4">
                                 <div className='text-start'>
-                                    <img src={b5} style={{width:'100%',height:'150px'}} className=' rounded-3' alt="" />
-                                    <h3 className='ftitle my-4'>Starting Now, Nitro Users Get 3 Months of Picsart Gold
+                                    <img src={b5} style={{ width: '100%', height: '150px' }} className=' rounded-3' alt="" />
+                                      
+                                    <div className="d-flex justify-content-between align-items-center">
+                                    
+                                        <h5 className='blogtile  m-0 p-0'> <BlogModal /> </h5>
+                                    </div>
+                                    <h3 className='ftitle my-2'>Starting Now, Nitro Users Get 3 Months of Picsart Gold
 
                                     </h3>
                                 </div>

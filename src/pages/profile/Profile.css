@@ -16,17 +16,18 @@
 }
 
 .aboutbtn {
-    padding: 10px;
+    padding: 11px;
     width: 100%;
     outline: none;
     border: none;
     background-color: transparent;
     color: #fff;
     transition: all 0.3s ease-in;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 500;
     text-align: start;
     width: 100%;
+    text-align: start;
 
 }
 
@@ -45,8 +46,8 @@
 .deshbordbtn {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    text-align: start;
+    align-items: flex-start;
+  
 }
 
 
@@ -57,6 +58,7 @@
 
 .profileheight {
     height: 300px;
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 10px 10px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 16px -18px inset;
 }
 
 
@@ -134,3 +136,13 @@ input {
     background-color: white;
     color: black;
 }
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff!important;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  }
+  

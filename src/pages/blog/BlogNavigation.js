@@ -51,14 +51,20 @@ export default function BlogNavigation() {
                                         <NavLink className='w-25 h-25' to='/profile'>
                                             <div className="profileedit text-center">
                                                 <p className='text-center m-0 logoutbtn'>MY Profile</p>
-                                                <button className='logoutbtn' onClick={logOut}>LogOut</button>
+                                       <Link to='/'>
+                           
+                                <button className='logoutbtn' onClick={logOut}>LogOut</button>
+                            </Link>
                                             </div>
                                         </NavLink>
-                                    </NavDropdown> : <NavDropdown className='text-white' id="" title='logout'>
+                                    </NavDropdown> : <NavDropdown className='text-dark' id="" title='logout'>
                                         <NavLink className='w-25 h-25' to='/profile'>
                                             <div className="profileedit text-center">
                                                 <p className='text-center m-0 logoutbtn'>MY Profile</p>
-                                                <button className='logoutbtn' onClick={logOut}>LogOut</button>
+                                       <Link to='/'>
+                           
+                                <button className='logoutbtn' onClick={logOut}>LogOut</button>
+                            </Link>
                                             </div>
                                         </NavLink>
                                     </NavDropdown>

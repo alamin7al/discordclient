@@ -18,16 +18,20 @@ const BlogCard = () => {
                 <div className="col-lg-6">
                     <div className="text-start ">
                         <img className='img-fluid blogimage' src={blog1} alt="" />
-                        <h5 className='blogtile my-3'>COMMUNITY</h5>
-                        <h2 className='blogtext'> <BlogModal/> </h2>
+                        <div className="d-flex justify-content-between align-items-center">
+                            <h5 className='blogtile my-3'>COMMUNITY</h5>
+                            <h5 className='blogtile my-3 '> <BlogModal /> </h5>
+                        </div>
+                        <h2 className='blogtext'>  Calixta’s Guide to Navigating the Voice Acting Industry </h2>
                     </div>
                 </div>
                 <div className="col-lg-6">
                     <div className="text-start ">
                         <img className='img-fluid blogimage' src={blog2} alt="" />
-                        <h5 className='blogtile my-3'>
-                            POLICY & SAFETY
-                        </h5>
+                        <div className="d-flex justify-content-between align-items-center">
+                            <h5 className='blogtile my-3'>   POLICY & SAFETY</h5>
+                            <h5 className='blogtile my-3 '> <BlogModal /> </h5>
+                        </div>
                         <h2 className='blogtext'>
                             Important Policy Updates
                         </h2>
@@ -39,8 +43,12 @@ const BlogCard = () => {
                 <div className="col-md-4 col-lg-4 col-sm-6 my-5">
                     <div className="text-start ">
                         <img className='img-fluid blogimage' src={blog2} alt="" />
-                        <h5 className='blogtile my-3'>PRODUCT & FEATURES
-                        </h5>
+                        <div className="d-flex justify-content-between align-items-center">
+                            <h5 className='blogtile my-3'>PRODUCT & FEATURES
+                            </h5>
+                            <h5 className='blogtile my-3 '> <BlogModal /> </h5>
+                        </div>
+
                         <h2 className='blogtext'> PlayStation® x Discord: Connect Your Account and Show What You’re Playing
 
                         </h2>
@@ -49,12 +57,13 @@ const BlogCard = () => {
                 <div className="col-md-4 col-lg-4 col-sm-6 my-5">
                     <div className="text-start ">
                         <img className='img-fluid blogimage' src={blog3} alt="" />
-                        <h5 className='blogtile my-3'>            COMMUNITY
-
-                        </h5>
+                        <div className="d-flex justify-content-between align-items-center">
+                            <h5 className='blogtile my-3'>COMUNNITY
+                            </h5>
+                            <h5 className='blogtile my-3 '> <BlogModal /> </h5>
+                        </div>
                         <h2 className='blogtext'>
-                            <BlogModaltwo/>
-
+                            Make Your Discord Profile Shine: Profile Pointers From Design Pros
 
                         </h2>
                     </div>
@@ -62,9 +71,13 @@ const BlogCard = () => {
                 <div className="col-md-4 col-lg-4 col-sm-6 my-5">
                     <div className="text-start ">
                         <img className='img-fluid blogimage' src={blog4} alt="" />
-                        <h5 className='blogtile my-3'>            DISCORD HQ
+                        <div className="d-flex justify-content-between align-items-center">
+                            <h5 className='blogtile my-3'>            DISCORD HQ
 
-                        </h5>
+                            </h5>
+                            <h5 className='blogtile my-3 '> <BlogModal /> </h5>
+                        </div>
+
                         <h2 className='blogtext'>
                             Discord Welcomes Elizabeth Hamren as new COO
                         </h2>
@@ -74,9 +87,14 @@ const BlogCard = () => {
                 <div className="col-md-4 col-lg-4 col-sm-6 my-5">
                     <div className="text-start ">
                         <img className='img-fluid blogimage' src={blog5} alt="" />
-                        <h5 className='blogtile my-3'>            POLICY & SAFETY
 
-                        </h5>
+
+                        <div className="d-flex justify-content-between align-items-center">
+                            <h5 className='blogtile my-3'>            POLICY & SAFETY
+
+                            </h5>
+                            <h5 className='blogtile my-3 '> <BlogModal /> </h5>
+                        </div>
                         <h2 className='blogtext'>
                             Parents & Educators, join us on Discord!
                         </h2>
@@ -85,8 +103,14 @@ const BlogCard = () => {
                 <div className="col-md-4 col-lg-4 col-sm-6 my-5">
                     <div className="text-start ">
                         <img className='img-fluid blogimage' src={blog6} alt="" />
-                        <h5 className='blogtile my-3'>PRODUCT & FEATURES
-                        </h5>
+
+                        <div className="d-flex justify-content-between align-items-center">
+                            <h5 className='blogtile my-3'>PRODUCT & FEATURES
+                            </h5>
+                            <h5 className='blogtile my-3 '> <BlogModal /> </h5>
+                        </div>
+
+
                         <h2 className='blogtext'>           PlayStation® x Discord: Connect Your Account and Show What You’re Playing
 
                         </h2>
@@ -95,20 +119,31 @@ const BlogCard = () => {
                 <div className="col-md-4 col-lg-4 col-sm-6 my-5">
                     <div className="text-start ">
                         <img className='img-fluid blogimage' src={blog7} alt="" />
-                        <h5 className='blogtile my-3'>            ENGINEERING & DESIGN
 
-                        </h5>
+                        <div className="d-flex justify-content-between align-items-center">
+                            <h5 className='blogtile my-3'>            ENGINEERING & DESIGN
+
+                            </h5>
+                            <h5 className='blogtile my-3 '> <BlogModal /> </h5>
+                        </div>
+
+
                         <h2 className='blogtext'>
-                            <BlogModalfour></BlogModalfour>
+                            How Data Science Informs Strategy & Innovation At Discord
+
                         </h2>
                     </div>
                 </div>
                 <div className="col-md-4 col-lg-4 col-sm-6 my-5">
                     <div className="text-start ">
                         <img className='img-fluid blogimage' src={blog8} alt="" />
-                        <h5 className='blogtile my-3'>            ENGINEERING & DESIGN
 
-                        </h5>
+                        <div className="d-flex justify-content-between align-items-center">
+                            <h5 className='blogtile my-3'>            ENGINEERING & DESIGN
+
+                            </h5>
+                            <h5 className='blogtile my-3 '> <BlogModal /> </h5>
+                        </div>
                         <h2 className='blogtext'>
                             How Data Science Informs Strategy & Innovation at Discord
                         </h2>
