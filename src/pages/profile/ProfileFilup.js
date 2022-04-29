@@ -12,7 +12,7 @@ export default function ProfileFilup() {
     const onSubmit = data => {
         setProcessing(true)
 
-        const url = `http://localhost:5000/user`
+        const url = `https://still-plateau-84079.herokuapp.com/user`
         fetch(url, {
             method: 'POST',
             headers: {

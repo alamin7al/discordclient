@@ -9,7 +9,7 @@ export default function About() {
   const [singleuser, setSingleUser] = useState([])
   useEffect(() => {
     
-    fetch(`http://localhost:5000/useremail?email=${user?.email}`)
+    fetch(`https://still-plateau-84079.herokuapp.com/useremail?email=${user?.email}`)
       .then(res => res.json())
       .then(data => setSingleUser(data)
       

@@ -13,7 +13,7 @@ export default function UserEdit() {
   const [single, setSingle] = useState({})
 
   useEffect(() => {
-    fetch(`http://localhost:5000/facedata/${id}`)
+    fetch(`https://still-plateau-84079.herokuapp.com/facedata/${id}`)
       .then(res => res.json())
       .then(data => setSingle(data))
 
