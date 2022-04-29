@@ -19,7 +19,7 @@ export default function DownloadHeader() {
                             <div className="container" style={{ textAlign: 'start' }}>
 
 
-                                <h1 className=' downloadtext text-white lh-base'>GET DISCORD <br /> <em className=''> FOR</em> <br /> ANY DEVICE
+                                <h1 className=' downloadtext text-white lh-base'>GET DISCORD <br /> <em className=''> FOR</em>  ANY <br /> DEVICE
                                 </h1>
 
                                 <p style={{ fontSize: '16px', lineHeight: '140%' }} className='text-white mb-5'>An adventure awaits. Hang out with your friends on our desktop app and keep the conversation going on mobile.

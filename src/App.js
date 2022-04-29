@@ -7,6 +7,8 @@ import './App.css';
 import {
   BrowserRouter, Routes, Route,
 } from "react-router-dom";
+import CrudHome from './pages/crud/CrudHome';
+import UserEdit from './pages/crud/UserEdit';
 const Home = lazy(() => import('./pages/Home/Home'));
 const Deshbordgo = lazy(() => import('./pages/profile/Deshbordgo'));
 const Nitro = lazy(() => import('./pages/nitro/Nitro'));
@@ -52,7 +54,10 @@ function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/profile" element={<ProfileHome />} />
               <Route path="/deshbordgo" element={<Deshbordgo />} />
+              <Route path="/crud" element={<CrudHome />} />
               <Route path={`/edit/:id`} element={<EditProfile />} />
+              <Route path={`/useredit/:id`} element={<UserEdit />} />
+              <Route path="/" element={<Home />} />
               <Route path="/" element={<Home />} />
 
             </Routes>

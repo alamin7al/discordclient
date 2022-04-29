@@ -10,7 +10,6 @@ const useFarebase = () => {
     const [user, setUser] = useState({})
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
-    // const [admin, setAdmin] = useState(false)
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
     //sigin
@@ -105,7 +104,7 @@ const useFarebase = () => {
 
     const [singleuser, setSingleUser] = useState([])
     useEffect(() => {
-        fetch(`https://still-plateau-84079.herokuapp.com/useremail?email=${user?.email}`)
+        fetch(`http://localhost:5000/useremail?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setSingleUser(data)
 
@@ -117,6 +116,14 @@ const useFarebase = () => {
     if (singleuser.length === 0) {
         <h3 className='text-white display-3'>loading...</h3>
     }
+
+
+
+
+
+
+
+
 
 
 

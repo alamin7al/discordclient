@@ -1,14 +1,16 @@
+
 import React, { useState } from 'react'
 import { Spinner } from 'react-bootstrap';
 import useAuth from '../login/useAuth';
-import './Blog.css'
-export default function BlogPost() {
+import './crud.css'
+export default function Userpost() {
+
+
   const { user } = useAuth()
   const email = (user.email)
   const date = (user?.metadata?.creationTime)
   const [processing, setProcessing] = useState(false);
 
-  const [heding, setheding] = useState('');
   const [desc, setdesc] = useState('');
   const [image, setImage] = useState(null);
   const handleSubmit = e => {
@@ -19,13 +21,13 @@ export default function BlogPost() {
       return;
     }
     const formData = new FormData();
-    formData.append('heding', heding);
+
     formData.append('desc', desc);
     formData.append('image', image);
     formData.append('email', email);
     formData.append('date', date);
     console.log(formData);
-    fetch('http://localhost:5000/blogdata', {
+    fetch('http://localhost:5000/facedata', {
       method: 'POST',
       body: formData
     })
@@ -41,17 +43,19 @@ export default function BlogPost() {
         console.error('Error:', error);
       });
   }
-  return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div class="cards mb-3" style={{ maxWidth: '100%' }}>
-          <div class="row g-0">
 
-            <div class="col-md-12  text-start">
+
+  return (
+    <div className='bor'>
+       <form onSubmit={handleSubmit} >
+        <div id='bor' class="cards mb-3" style={{ maxWidth: '100%' }}>
+          <div class="row g-0 ">
+
+            <div class="col-md-12  text-start ms-3">
               <label className='my-2 fw-lighter text-uppercase text-white d-block text-start ' for="inputEmail4">Image Upload</label>
               <input
                 className='text-start rounded-2 '
-
+                style={{ background: '#BA77EC' }}
                 onChange={(e) => setImage(e.target.files[0])}
                 type="file"
                 accept="image/*"
@@ -59,14 +63,11 @@ export default function BlogPost() {
             </div>
             <div class="col-md-12">
               <div class="card-body text-start">
+             
                 <>
-                  <label className='my-1 fw-lighter text-uppercase text-white' for="inputEmail4">Name</label>
-                  <input onChange={e => setheding(e.target.value)} style={{ background: '#404EED' }} type="text" class="form-control my-2 text-white fw-light" />
-                </>
-                <>
-                  <label className='my-1 fw-lighter text-uppercase text-white' for="inputEmail4">Description</label>
+                  <label className='my-1 fw-lighter text-uppercase text-white' for="inputEmail4">Whats On Your Mind *</label>
 
-                  <textarea onChange={e => setdesc(e.target.value)} style={{ background: '#404EED' }} type="text" class="form-control  text-white" id="exampleFormControlTextarea1" rows="6">
+                  <textarea placeholder='Whats On Your Mind' onChange={e => setdesc(e.target.value)} style={{ background: '#BA77EC',color:'#fff' }} type="text" class="form-control fs-3   text-white" id="exampleFormControlTextarea1" rows="3">
 
                   </textarea>
                   {
@@ -90,7 +91,7 @@ export default function BlogPost() {
                         <Spinner animation="grow" variant="dark" />
                     </>
                 }
-                  <button type='submit' className='submitbtn my-3'>
+                  <button type='submit' className='crudbtn my-3'>
                     submit
                   </button>
                 </>

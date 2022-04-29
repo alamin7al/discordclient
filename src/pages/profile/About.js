@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Spinner } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import useAuth from '../login/useAuth'
 
 
 export default function About() {
   const { user } = useAuth()
 
-
   const [singleuser, setSingleUser] = useState([])
   useEffect(() => {
-    fetch(`https://still-plateau-84079.herokuapp.com/useremail?email=${user?.email}`)
+    
+    fetch(`http://localhost:5000/useremail?email=${user?.email}`)
       .then(res => res.json())
       .then(data => setSingleUser(data)
-
+      
       )
   }, [user?.email])
 
@@ -25,33 +24,35 @@ export default function About() {
   return (
     <>
       {
-          singleuser.length === 0 ? <div style={{ marginTop: '10px' }}>
+        singleuser.length === 0 ? <div style={{ marginTop: '10px' }}>
           <>
-  <Spinner animation="border" variant="primary" />
-  <Spinner animation="border" variant="secondary" />
-  <Spinner animation="border" variant="success" />
-  <Spinner animation="border" variant="danger" />
-  <Spinner animation="border" variant="warning" />
-  <Spinner animation="border" variant="info" />
-  <Spinner animation="border" variant="light" />
-  <Spinner animation="border" variant="dark" />
-  <Spinner animation="grow" variant="primary" />
-  <Spinner animation="grow" variant="secondary" />
-  <Spinner animation="grow" variant="success" />
-  <Spinner animation="grow" variant="danger" />
-  <Spinner animation="grow" variant="warning" />
-  <Spinner animation="grow" variant="info" />
-  <Spinner animation="grow" variant="light" />
-  <Spinner animation="grow" variant="dark" />
-</>
-        </div> : ''
-        }
-     
-   
+            <h5 className='text-white'>Create your profile first</h5>
 
-        <div className='  aboutdata w-100 h-100 '>
-          {
-            singleuser.slice(0, 1).map(s => 
+            <Spinner animation="border" variant="primary" />
+            <Spinner animation="border" variant="secondary" />
+            <Spinner animation="border" variant="success" />
+            <Spinner animation="border" variant="danger" />
+            <Spinner animation="border" variant="warning" />
+            <Spinner animation="border" variant="info" />
+            <Spinner animation="border" variant="light" />
+            <Spinner animation="border" variant="dark" />
+            <Spinner animation="grow" variant="primary" />
+            <Spinner animation="grow" variant="secondary" />
+            <Spinner animation="grow" variant="success" />
+            <Spinner animation="grow" variant="danger" />
+            <Spinner animation="grow" variant="warning" />
+            <Spinner animation="grow" variant="info" />
+            <Spinner animation="grow" variant="light" />
+            <Spinner animation="grow" variant="dark" />
+          </>
+        </div> : ''
+      }
+
+
+
+      <div className='  aboutdata w-100 h-100 '>
+        {
+          singleuser.slice(0, 1).map(s =>
             <div className="my-4 w-100 h-100 text-white ">
 
               <div key={s._id} className="d-flex ">
@@ -91,9 +92,9 @@ export default function About() {
               </div>
 
             </div>)
-          }
-        </div>
-      
+        }
+      </div>
+
 
 
     </>

@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Spinner } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import useAuth from '../login/useAuth';
 
 export default function ProfileFilup() {
     const { user } = useAuth()
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [processing, setProcessing] = useState(false);
+
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        const url = `https://still-plateau-84079.herokuapp.com/user`
+        setProcessing(true)
+
+        const url = `http://localhost:5000/user`
         fetch(url, {
             method: 'POST',
             headers: {
@@ -17,9 +22,10 @@ export default function ProfileFilup() {
         })
             .then(res => res.json())
             .then(data => {
-                // if (data.insertedi) {
-                //   alert('update')
-                // }
+                if (data.insertedId) {
+                    alert('See About Page')
+                    setProcessing(false)
+                }
             })
     }
 
@@ -126,7 +132,27 @@ export default function ProfileFilup() {
                 </>
 
 
+                {
+                    processing && <>
 
+                        <Spinner animation="border" variant="primary" />
+                        <Spinner animation="border" variant="secondary" />
+                        <Spinner animation="border" variant="success" />
+                        <Spinner animation="border" variant="danger" />
+                        <Spinner animation="border" variant="warning" />
+                        <Spinner animation="border" variant="info" />
+                        <Spinner animation="border" variant="light" />
+                        <Spinner animation="border" variant="dark" />
+                        <Spinner animation="grow" variant="primary" />
+                        <Spinner animation="grow" variant="secondary" />
+                        <Spinner animation="grow" variant="success" />
+                        <Spinner animation="grow" variant="danger" />
+                        <Spinner animation="grow" variant="warning" />
+                        <Spinner animation="grow" variant="info" />
+                        <Spinner animation="grow" variant="light" />
+                        <Spinner animation="grow" variant="dark" />
+                    </>
+                }
                 <button type='submit' className='submitbtn my-3'>
                     submit
                 </button>

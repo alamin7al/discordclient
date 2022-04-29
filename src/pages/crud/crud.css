@@ -48,35 +48,49 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  
+
 }
 
 
-.profilehed {
-    box-shadow: rgba(50, 50, 93, 0.1) 0px 10px 10px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 16px -18px inset;
+.crudhead {
+    background-image: linear-gradient(#DF90AF, #B674F3);
 }
 
+#bor {
+    border-radius: 21px solid #DB8DB7;
+}
 
-.profileheight {
+.crudstyle {
+    background-image: linear-gradient(#DF90AF, #B674F3);
+
+}
+
+#boxsh {
+    box-shadow: rgb(50 50 93 / 10%) 0px 10px 10px -12px inset, rgb(0 0 0 / 30%) 0px 18px 16px -18px inset;
+
+}
+
+.crudhight {
     height: 300px;
-    box-shadow: rgba(50, 50, 93, 0.1) 0px 10px 10px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 16px -18px inset;
+    background-image: linear-gradient(#DF90AF, #B674F3);
+
 }
 
 
 @media(max-width:768px) {
-    .profileheight {
+    .crudhight {
         height: 500px;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .profileheight {
+    .crudhight {
         height: 600px;
     }
 }
 
 @media screen and (max-width: 800px) {
-    .profileheight {
+    .crudhight {
         height: 500px;
     }
 }
@@ -119,31 +133,52 @@ input {
 
 
 
-.submitbtn {
+.crudbtn {
     appearance: button;
     backface-visibility: hidden;
-    background-color: #405cf5;
     border-radius: 6px;
+    background-color: white;
+    color: black;
+
     border-width: 0;
     padding: 8px 29px;
-    color: #fff;
     cursor: pointer;
     transition: all 0.5s ease-in;
     width: auto;
     margin-bottom: 20px;
 }
 
-.submitbtn:hover {
-    background-color: white;
-    color: black;
+.crudbtn:hover {
+    background-color: #D086C8;
+
+    color: #fff;
 }
+
 .nav-link {
     display: block;
     padding: 0.5rem 1rem;
-    color: #fff!important;
+    color: #fff !important;
     text-decoration: none;
     font-size: 20px;
     text-transform: uppercase;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-  }
-  
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.saftytext {
+    font-size: 16px;
+    color: #fff;
+    text-align: start;
+    line-height: 140%;
+    white-space: break-spaces;
+}
+
+.userbody {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 100%;
+    width: 100%;
+}
+
+.userbody {
+    padding: 15px;
+    box-shadow: rgb(50 50 93 / 1%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+}

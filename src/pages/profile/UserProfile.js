@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { } from 'react'
 import { Link } from 'react-router-dom'
 import { FaUserEdit } from 'react-icons/fa';
 
@@ -8,27 +8,16 @@ import { Spinner } from 'react-bootstrap';
 // import EditProfile from './EditProfile'
 export default function UserProfile() {
   const { user, singleuser } = useAuth()
-  console.log(singleuser);
 
 
 
-  if (singleuser.length === 0) {
-    <>
-      <Spinner animation="border" variant="primary" />
-      <Spinner animation="border" variant="secondary" />
-    </>
-  }
+
+
 
   return (
     <div className='profileheight' style={{ width: '100%', background: '#404EED' }}>
       <div className="d-flex justify-content-between align-items-center h-100 container">
 
-        {
-          singleuser.length === 0 ? <>
-            <Spinner animation="border" variant="primary" />
-            <Spinner animation="border" variant="secondary" />
-          </> : ''
-        }
 
         <div className="">
 
@@ -53,12 +42,26 @@ export default function UserProfile() {
           </div>
         </div>
 
+        <Link to='/crud'>
+          <button className='editbtn fw-lighter text-uppercase text-start fs-5'><FaUserEdit className='fs-2' /> Crud </button>
+        </Link>
+
+
+        {
+          singleuser.length === 0 ? <>
+            <button style={{ border: '0', margin: '0', fontSize: '14px', backgroundColor: 'transparent', color: 'white' }} onClick={() => window.location.reload(false)}>Click After Sorting The Profile</button>
+
+            <Spinner animation="border" variant="danger" />
+            <Spinner animation="border" variant="dark" />
+            <Spinner animation="border" variant="success" />
+          </> : ''
+        }
         {
           singleuser.map((s, i) => {
             return (
               <>
                 <Link key={i} to={`/edit/${s._id}`}>
-                  {/* <button className='editbtn fw-lighter text-uppercase text-start fs-1'><FaUserEdit className='fs-2' /> Edit Profile </button> */}
+                  <button className='editbtn fw-lighter text-uppercase text-start fs-5'><FaUserEdit className='fs-2' /> Edit Profile </button>
                 </Link>
               </>
             )

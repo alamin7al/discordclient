@@ -10,18 +10,19 @@ import { Spinner } from 'react-bootstrap';
 export default function EditProfile() {
   const { id } = useParams()
   const { user } = useAuth()
+  const [processing, setProcessing] = useState(false);
 
   const [single, setSingle] = useState({})
 
   useEffect(() => {
-    fetch(`https://still-plateau-84079.herokuapp.com/singleuser/${id}`)
+    fetch(`http://localhost:5000/singleuser/${id}`)
       .then(res => res.json())
       .then(data => setSingle(data))
 
   }, [single, id])
 
 
-  const { register, handleSubmit, watch, setFocus, formState: { errors } } = useForm();
+  const { register, handleSubmit,  formState: { errors } } = useForm();
 
 
 
@@ -46,8 +47,9 @@ export default function EditProfile() {
 
 
   const onSubmit = data => {
+    setProcessing(true)
 
-    const url = `https://still-plateau-84079.herokuapp.com/singleuser/${id}`
+    const url = `http://localhost:5000/singleuser/${id}`
     fetch(url, {
       method: 'PUT',
       headers: {
@@ -58,7 +60,9 @@ export default function EditProfile() {
       .then(res => res.json())
       .then(data => {
         if (data.modifiedCount >= 0) {
-          alert('update')
+          alert('updated successfull')
+          setProcessing(false)
+
         }
       })
   };
@@ -189,7 +193,27 @@ export default function EditProfile() {
 
               {errors.exampleRequired && <span>This field is required</span>}
 
+              {
+                    processing && <>
 
+                        <Spinner animation="border" variant="primary" />
+                        <Spinner animation="border" variant="secondary" />
+                        <Spinner animation="border" variant="success" />
+                        <Spinner animation="border" variant="danger" />
+                        <Spinner animation="border" variant="warning" />
+                        <Spinner animation="border" variant="info" />
+                        <Spinner animation="border" variant="light" />
+                        <Spinner animation="border" variant="dark" />
+                        <Spinner animation="grow" variant="primary" />
+                        <Spinner animation="grow" variant="secondary" />
+                        <Spinner animation="grow" variant="success" />
+                        <Spinner animation="grow" variant="danger" />
+                        <Spinner animation="grow" variant="warning" />
+                        <Spinner animation="grow" variant="info" />
+                        <Spinner animation="grow" variant="light" />
+                        <Spinner animation="grow" variant="dark" />
+                    </>
+                }
               <button type='submit' className='submitbtn my-3'>
                 submit
               </button>
@@ -199,6 +223,8 @@ export default function EditProfile() {
 
           </form >
         </div > : <>
+        <h5 className='text-white'>Create your profile first</h5>
+
           <Spinner animation="border" variant="primary" />
           <Spinner animation="border" variant="secondary" />
           <Spinner animation="border" variant="success" />

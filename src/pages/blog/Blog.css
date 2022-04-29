@@ -135,20 +135,6 @@
     letter-spacing: 1px;
     transition: 0.2s ease;
 }
-.ftitle{
-    display: block;
-    overflow: visible;
-    align-self: baseline;
-    font-family: 'Ginto Normal', sans-serif;
-    font-size: 20px;
-    line-height: 125%;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.ftitle:hover{
-    color: #3E4EFD;
-}
 
 .blogbtn:hover {
     background-color: #3E4EFD;

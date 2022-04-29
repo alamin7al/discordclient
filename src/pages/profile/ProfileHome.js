@@ -9,7 +9,7 @@ const ProfileDeshbord = lazy(() => import('./ProfileDeshbord'));
 
 export default function ProfileHome() {
   return (
-    <div style={{ background: '#5865F2' }} className=''>
+    <div style={{ background: '' }} className=''>
 
       <Suspense fallback={<div style={{ marginTop: '250px' }}>
         <Spinner animation="border" variant="dark" />

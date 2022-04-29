@@ -1,0 +1,145 @@
+#app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: calc((100% - 30px) / 2) !important;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.nitro {
+    background-image: linear-gradient(#B674F3, #DF90AF);
+}
+
+.nitrobtn1 {
+    border-radius: 28px;
+    font-size: 20px;
+    padding: 10px 22px;
+    background-color: #23272a;
+    color: white;
+    transition: all 0.5s ease;
+
+}
+
+.nitrobtn2 {
+    border-radius: 28px;
+    font-size: 20px;
+    padding: 10px 24px;
+    color: white;
+    background-color: #23272a;
+    margin-top: 10px;
+    transition: all 0.5s ease;
+
+}
+
+.nitrobtn2:hover {
+    box-shadow: rgba(13, 10, 20, 0.584) 0 8px 15px;
+    transform: translateY(-2px);
+    background-color: #36393F;
+}
+
+
+.emborder {
+    background-color: #5865F2;
+    border-radius: 24px;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 12px;
+    line-height: 24px;
+
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff!important;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  }
+  
+.card1 {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+    background: linear-gradient(142.53deg, #00a295, #26e8f4 98.75%), #3dcda7;
+}
+
+.card2 {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+
+    background: linear-gradient(321.82deg, #21f2ff, #4181ff 59.22%, #4475ff 98.02%), #7196ff;
+}
+
+.card3 {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+
+    background: linear-gradient(138.46deg, #3e70ff 1.48%, #9a98ff 98.75%), #ff73fa;
+}
+
+.card4 {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+
+    background: linear-gradient(141.85deg, #7e7bff, #ff73fa);
+}
+
+.card5 {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+
+    background: linear-gradient(141.48deg, #f837ee 1.35%, #ffcd4b);
+}
+
+.card6 {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    background: linear-gradient(321.73deg, #ffcd4b -1.09%, #ee6315 100.65%);
+}

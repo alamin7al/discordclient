@@ -4,7 +4,7 @@ import loginimg from '../img/login.webp'
 import '../Footer/Footer.css'
 import { useState, } from 'react';
 import {
-    BrowserRouter as Router,
+
 
     NavLink,
 

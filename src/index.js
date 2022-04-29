@@ -10,7 +10,8 @@ import reportWebVitals from './reportWebVitals';
 // eslint-disable-next-line
 import "swiper/css/bundle";
 
-
+import "swiper/css/bundle";
+import '../src/pages/download/styles.css';
     
 
 

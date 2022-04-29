@@ -343,9 +343,7 @@ p {
         font-size: 2.5rem;
     }
 
-    h3 {
-        font-size: 1.75rem;
-    }
+  
 
     h4 {
         font-size: 1rem;
@@ -396,7 +394,7 @@ p {
     position: absolute;
     z-index: 1000;
     display: none;
-    min-width: 120px;
+    min-width: 7rem;
     margin: 0;
     font-size: 1rem;
     color: #212529;
