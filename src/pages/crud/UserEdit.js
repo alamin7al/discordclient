@@ -12,11 +12,11 @@ export default function UserEdit() {
   const { id } = useParams()
   const [processing, setProcessing] = useState(false);
 
-  // https://still-plateau-84079.herokuapp.com
   const [single, setSingle] = useState({})
 
   useEffect(() => {
-    fetch(`http://localhost:5000/facedata/${id}`)
+    fetch(`https://still-plateau-84079.herokuapp.com
+/facedata/${id}`)
       .then(res => res.json())
       .then(data => setSingle(data))
 
@@ -28,7 +28,8 @@ export default function UserEdit() {
   const onSubmit = data => {
     setProcessing(true)
 
-    const url = `http://localhost:5000/facedata/${id}`
+    const url = `https://still-plateau-84079.herokuapp.com
+/facedata/${id}`
     fetch(url, {
       method: 'PUT',
       headers: {
