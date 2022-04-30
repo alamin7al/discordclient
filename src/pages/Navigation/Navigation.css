@@ -397,10 +397,10 @@ p {
     min-width: 7rem;
     margin: 0;
     font-size: 1rem;
-    color: #212529;
+    color: #fff; 
     text-align: left;
     list-style: none;
-    background-color: #fff;
+    background-color: transparent;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, .15);
     border-radius: 0.25rem;
@@ -415,8 +415,8 @@ p {
     padding: 7px 12px;
     outline: none;
     border: none;
-    color: #404EED;
-    background-color: #fff;
+    color: #fff;
+    background-color: transparent;
 }
 
 .logoutbtn:hover {

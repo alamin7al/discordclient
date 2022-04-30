@@ -9,7 +9,7 @@ export default function Blogsee() {
 
     const [fileData, setfileData] = useState([]);
     useEffect(() => {
-        const url = `https://still-plateau-84079.herokuapp.com/blogdata`
+        const url = `http://localhost:5000/blogdata`
         fetch(url)
             .then(res => res.json())
             .then(data => setfileData(data))
@@ -19,7 +19,7 @@ export default function Blogsee() {
 
     // const onSubmit = data => {
 
-    //     // const url = `https://still-plateau-84079.herokuapp.com/user`
+    //     // const url = `http://localhost:5000/user`
     //     // fetch(url, {
     //     //     method: 'POST',
     //     //     headers: {

@@ -11,14 +11,33 @@ export default function UserSee() {
 
   const [facedata, setfacedata] = useState([]);
   useEffect(() => {
-    const url = `https://still-plateau-84079.herokuapp.com/facedata`
+    const url = `http://localhost:5000/facedata`
     fetch(url)
       .then(res => res.json())
       .then(data => setfacedata(data))
   }, [])
 
+  const handleDeleted = (id) => {
+    const procces = window.confirm('Are You Sure, You Want To Delet')
+    if (procces) {
+      fetch(`http://localhost:5000/facedata/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'content-type': 'application/json'
+        }
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.deletedCount >= 0) {
+            alert('deleted SuccessFully ')
+            const rstrongainignData = facedata.filter(x => x._id !== id)
+            setfacedata(rstrongainignData)
+          }
 
-  console.log(facedata);
+        })
+    }
+  }
+
 
 
   return (
@@ -71,29 +90,42 @@ export default function UserSee() {
 
 
                     <div className='d-flex justify-content-center align-items-center mt-3  '>
-                      <p style={{fontSize:'15px'}} className='lead text-white ms-2'> {user.displayName} </p>
+                      <p style={{ fontSize: '15px' }} className='lead text-white ms-2'> {user.displayName} </p>
                       <p style={{ fontSize: '14px' }} className=' lead text-white ms-1'>{user?.metadata?.creationTime}</p>
 
-                      <NavDropdown style={{ border: '0', outline: '0', backgroundColor: 'transparent' }} className='mx-auto' id="" title={'...'}>
-                        <Link className='mx-auto' to={`/useredit/${s._id}`}>
-                          Edit
-                        
-                        </Link>
+                      <NavDropdown style={{ backgroundColor: 'transparent!important' }} className='' id="" title={'...'}>
+                        <NavLink style={{ height: '100%', width: '100%', backgroundColor: 'transparent!important' }} className='' to='/profile'>
+                          <div style={{ backgroundColor: 'transparent!important' }} className="profileedit text-center">
+                            <Link className='mx-auto text-white ' to={`/useredit/${s._id}`}>
+                              Edit
+                            </Link>
+                            <button style={{ border: '0', outline: '0', backgroundColor: 'transparent' }} onClick={() => handleDeleted(s._id)} className='border-0 outline-0 mx-auto text-white mt-2'>Delete</button>
+                          </div>
+                        </NavLink>
                       </NavDropdown>
                     </div>
-
-
                   </div>
-
                   <div className='d-flex justify-content-start'>
                     <img className='rounded' style={{ height: '90px', width: 'auto' }} src={`data:image/png;base64,${s.image}`}
                       alt="" />
-                    <p style={{ color: '#fff', fontWeight: '400', lineHeight: '1.625' }} className='my-4 saftytext ms-3 mb-5'>
+                    <p style={{ color: '#fff', fontWeight: '400', lineHeight: '1.625' }} className=' saftytext ms-3 mb-5'>
                       {s.desc}
                     </p>
                   </div>
-                  {/* <h3 style={{ fontWeight: '500' }} className='principleText my-4'>We’re determined to make sure that Discord will </h3> */}
+                  {s.commant && <>
+                    <hr />
+                    <div className="text-start">
+                      <label className='my-1 fw-lighter text-uppercase text-white text-start' for="inputEmail4">Comment Area
+                      </label>
+                      <button
+                      disabled
+                      style={{ background: 'transparent',height:'50px' }} class="form-control   fw-light   w-100 mt-2 text-white text-start"  >
 
+                        {s.commant}
+                        
+                      </button>
+                    </div>
+                  </>}
 
 
 

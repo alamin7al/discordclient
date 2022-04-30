@@ -1,6 +1,7 @@
 import React, { } from 'react'
 import { Link } from 'react-router-dom'
 import { FaUserEdit } from 'react-icons/fa';
+import { IoIosCreate } from 'react-icons/io';
 
 import useAuth from '../login/useAuth'
 import pr from '../img/profileimgicon.png'
@@ -42,9 +43,19 @@ export default function UserProfile() {
           </div>
         </div>
 
+
+
+
         <Link to='/crud'>
-          <button className='editbtn fw-lighter text-uppercase text-start fs-5'><FaUserEdit className='fs-2' /> Crud </button>
+          <button className='editbtn fw-lighter text-uppercase text-start fs-5'> <IoIosCreate className='fs-2' />  create </button>
         </Link>
+
+
+
+
+
+
+
 
 
         {

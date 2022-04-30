@@ -171,7 +171,11 @@ input {
     line-height: 140%;
     white-space: break-spaces;
 }
-
+.editbtnface{
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
 .userbody {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     height: 100%;

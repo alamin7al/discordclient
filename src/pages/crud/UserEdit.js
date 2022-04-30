@@ -5,21 +5,54 @@ import CrudNavigation from './CrudNavigation'
 import Crudprofile from './Crudprofile'
 import pr from '../img/profileimgicon.png'
 import './crud.css'
+import { useForm } from 'react-hook-form'
+import { Spinner } from 'react-bootstrap'
 export default function UserEdit() {
   const { user } = useAuth()
   const { id } = useParams()
+  const [processing, setProcessing] = useState(false);
 
-
+  // https://still-plateau-84079.herokuapp.com
   const [single, setSingle] = useState({})
 
   useEffect(() => {
-    fetch(`https://still-plateau-84079.herokuapp.com/facedata/${id}`)
+    fetch(`http://localhost:5000/facedata/${id}`)
       .then(res => res.json())
       .then(data => setSingle(data))
 
   }, [single, id])
 
-  console.log(single);
+
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  const onSubmit = data => {
+    setProcessing(true)
+
+    const url = `http://localhost:5000/facedata/${id}`
+    fetch(url, {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.modifiedCount >= 0) {
+          alert('updated successfull')
+          setProcessing(false)
+
+        }
+      })
+  };
+
+
+
+
+
+
+
+
 
 
 
@@ -56,17 +89,82 @@ export default function UserEdit() {
 
 
               </div>
-
-              <div className='d-flex justify-content-start'>
-                <img className='rounded' style={{ height: '90px', width: 'auto' }} src={`data:image/png;base64,${single.image}`}
-                  alt="" />
-                <p style={{ color: '#fff', fontWeight: '400', lineHeight: '1.625' }} className='my-4 saftytext ms-3 mb-5'>
-                  {single.desc}
-                </p>
-              </div>
-              {/* <h3 style={{ fontWeight: '500' }} className='principleText my-4'>We’re determined to make sure that Discord will </h3> */}
+              {
+                single._id ?
+                  <form className='aboutdata ' onSubmit={handleSubmit(onSubmit)}>
 
 
+
+                    <div className='d-flex justify-content-start text-start'>
+                      <div>
+                        <img className='rounded me-4' style={{ height: '100%', width: '150px' }} src={`data:image/png;base64,${single.image}`}
+                          alt="" />
+                      </div>
+
+                      <div className='w-100'>
+                        <textarea defaultValue={single.desc}
+                          {...register("desc")} style={{ background: 'transparent' }} class="form-control w-100  text-white fw-light " id="exampleFormControlTextarea1" rows="4"></textarea>
+                        <textarea placeholder='Comment Box'
+                          {...register("commant")} style={{ background: 'transparent' }} class="form-control   fw-light   w-100 mt-2 mx-auto" id="exampleFormControlTextarea1" rows="2"></textarea>
+
+
+                        {
+                          processing && <>
+
+                            <Spinner animation="border" variant="primary" />
+                            <Spinner animation="border" variant="secondary" />
+                            <Spinner animation="border" variant="success" />
+                            <Spinner animation="border" variant="danger" />
+                            <Spinner animation="border" variant="warning" />
+                            <Spinner animation="border" variant="info" />
+                            <Spinner animation="border" variant="light" />
+                            <Spinner animation="border" variant="dark" />
+                            <Spinner animation="grow" variant="primary" />
+                            <Spinner animation="grow" variant="secondary" />
+                            <Spinner animation="grow" variant="success" />
+                            <Spinner animation="grow" variant="danger" />
+                            <Spinner animation="grow" variant="warning" />
+                            <Spinner animation="grow" variant="info" />
+                            <Spinner animation="grow" variant="light" />
+                            <Spinner animation="grow" variant="dark" />
+                          </>
+                        }
+
+                        <div className='text-start'>
+                          <button type='submit' className='crudbtn  my-3 '>
+                            submit
+                          </button>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+
+
+
+
+                  </form> : <>
+                    <h5 className='text-white'>Create Post first</h5>
+
+                    <Spinner animation="border" variant="primary" />
+                    <Spinner animation="border" variant="secondary" />
+                    <Spinner animation="border" variant="success" />
+                    <Spinner animation="border" variant="danger" />
+                    <Spinner animation="border" variant="warning" />
+                    <Spinner animation="border" variant="info" />
+                    <Spinner animation="border" variant="light" />
+                    <Spinner animation="border" variant="dark" />
+                    <Spinner animation="grow" variant="primary" />
+                    <Spinner animation="grow" variant="secondary" />
+                    <Spinner animation="grow" variant="success" />
+                    <Spinner animation="grow" variant="danger" />
+                    <Spinner animation="grow" variant="warning" />
+                    <Spinner animation="grow" variant="info" />
+                    <Spinner animation="grow" variant="light" />
+                    <Spinner animation="grow" variant="dark" />
+                  </>
+              }
 
 
 

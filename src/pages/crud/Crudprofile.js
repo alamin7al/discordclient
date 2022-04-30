@@ -1,7 +1,8 @@
 
 import React, { } from 'react'
 import { Link } from 'react-router-dom'
-import { FaUserEdit } from 'react-icons/fa';
+import { SiSlideshare } from 'react-icons/si';
+import { IoIosCreate } from 'react-icons/io';
 
 import useAuth from '../login/useAuth'
 import pr from '../img/profileimgicon.png'
@@ -11,7 +12,7 @@ export default function Crudprofile() {
     const { user } = useAuth()
 
     return (
-        <div className='crudhight' id='boxsh' style={{ width: '100%',}}>
+        <div className='crudhight' id='boxsh' style={{ width: '100%', }}>
             <div className="d-flex justify-content-between align-items-center h-100 container">
 
 
@@ -37,12 +38,14 @@ export default function Crudprofile() {
                     </div>
                 </div>
 
+
+
                 <Link to='/crud'>
-          <button className='editbtn fw-lighter text-uppercase text-start fs-5'><FaUserEdit className='fs-2' /> Crud </button>
-        </Link>
+                    <button className='editbtn fw-lighter text-uppercase text-start fs-5'> <IoIosCreate className='fs-2' />  create </button>
+                </Link>
 
                 <Link to='/profile'>
-                    <button className='editbtn fw-lighter text-uppercase text-start fs-4'><FaUserEdit className='fs-2' /> Deshbord </button>
+                    <button className='editbtn fw-lighter text-uppercase text-start fs-4'><SiSlideshare className='fs-2' /> Deshbord </button>
                 </Link>
             </div>
         </div>

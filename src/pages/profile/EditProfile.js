@@ -15,7 +15,7 @@ export default function EditProfile() {
   const [single, setSingle] = useState({})
 
   useEffect(() => {
-    fetch(`https://still-plateau-84079.herokuapp.com/singleuser/${id}`)
+    fetch(`http://localhost:5000/singleuser/${id}`)
       .then(res => res.json())
       .then(data => setSingle(data))
 
@@ -49,7 +49,7 @@ export default function EditProfile() {
   const onSubmit = data => {
     setProcessing(true)
 
-    const url = `https://still-plateau-84079.herokuapp.com/singleuser/${id}`
+    const url = `http://localhost:5000/singleuser/${id}`
     fetch(url, {
       method: 'PUT',
       headers: {
