@@ -15,8 +15,7 @@ export default function UserEdit() {
   const [single, setSingle] = useState({})
 
   useEffect(() => {
-    fetch(`https://still-plateau-84079.herokuapp.com
-/facedata/${id}`)
+    fetch(`https://still-plateau-84079.herokuapp.com/facedata/${id}`)
       .then(res => res.json())
       .then(data => setSingle(data))
 
@@ -28,8 +27,7 @@ export default function UserEdit() {
   const onSubmit = data => {
     setProcessing(true)
 
-    const url = `https://still-plateau-84079.herokuapp.com
-/facedata/${id}`
+    const url = `https://still-plateau-84079.herokuapp.com/facedata/${id}`
     fetch(url, {
       method: 'PUT',
       headers: {

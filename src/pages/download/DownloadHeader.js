@@ -11,7 +11,7 @@ export default function DownloadHeader() {
                 <div
                 data-aos="fade-down"
                 data-aos-easing="linear"
-                data-aos-duration="1500"
+                data-aos-duration="500"
                 
                 className="row" style={{ height: '100%' }}>
                     <div className="col-md-7 my-5" >

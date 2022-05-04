@@ -37,7 +37,8 @@ export default function Navigation() {
               <NavLink className='navbarstyle' to='/safty'> Safty</NavLink>
               <NavLink className='navbarstyle' to='/blog'> Blog</NavLink>
               <NavLink className='navbarstyle' to='/help'> Support</NavLink>
-              <NavLink className='navbarstyle' to='/carer'> Carer</NavLink>
+              <NavLink className='navbarstyle' to='/carer'> Carer</NavLink>                <NavLink className='navbarstyle' to='/crypto'> Crypto</NavLink>
+
             </Nav>
             <Nav className="">
               {

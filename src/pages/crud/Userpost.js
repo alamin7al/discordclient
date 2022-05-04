@@ -27,8 +27,7 @@ export default function Userpost() {
     formData.append('email', email);
     formData.append('date', date);
     console.log(formData);
-    fetch('https://still-plateau-84079.herokuapp.com
-/facedata', {
+    fetch('https://still-plateau-84079.herokuapp.com/facedata', {
       method: 'POST',
       body: formData
     })

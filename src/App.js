@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import CrudHome from './pages/crud/CrudHome';
 import UserEdit from './pages/crud/UserEdit';
+import Crypto from './pages/Crypto/Crypto';
 const Home = lazy(() => import('./pages/Home/Home'));
 const Deshbordgo = lazy(() => import('./pages/profile/Deshbordgo'));
 const Nitro = lazy(() => import('./pages/nitro/Nitro'));
@@ -44,6 +45,7 @@ function App() {
             {/* <Navigation></Navigation> */}
             <Routes>
               <Route path="/home" element={<Home />} />
+              <Route path="/crypto" element={<Crypto />} />
               <Route path="/nitro" element={<Nitro />} />
               <Route path="/download" element={<DownloadHome />} />
               <Route path="/safty" element={<SaftyHome />} />
@@ -57,7 +59,6 @@ function App() {
               <Route path="/crud" element={<CrudHome />} />
               <Route path={`/edit/:id`} element={<EditProfile />} />
               <Route path={`/useredit/:id`} element={<UserEdit />} />
-              <Route path="/" element={<Home />} />
               <Route path="/" element={<Home />} />
 
             </Routes>

@@ -11,8 +11,7 @@ export default function UserSee() {
 
   const [facedata, setfacedata] = useState([]);
   useEffect(() => {
-    const url = `https://still-plateau-84079.herokuapp.com
-/facedata`
+    const url = `https://still-plateau-84079.herokuapp.com/facedata`
     fetch(url)
       .then(res => res.json())
       .then(data => setfacedata(data))
@@ -21,8 +20,7 @@ export default function UserSee() {
   const handleDeleted = (id) => {
     const procces = window.confirm('Are You Sure, You Want To Delet')
     if (procces) {
-      fetch(`https://still-plateau-84079.herokuapp.com
-/facedata/${id}`, {
+      fetch(`https://still-plateau-84079.herokuapp.com/facedata/${id}`, {
         method: 'DELETE',
         headers: {
           'content-type': 'application/json'
